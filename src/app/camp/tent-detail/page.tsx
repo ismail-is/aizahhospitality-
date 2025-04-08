@@ -23,6 +23,7 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import Rate from '@/components/Other/Rate'
 import StickyBox from 'react-sticky-box';
+import HeaderThree from '@/components/Header/HeaderThree'
 
 interface GuestType {
     adult: number;
@@ -172,25 +173,74 @@ const TentDetail = () => {
         <>
             <div className='ten-detail'>
                 <HeaderOne />
-                
-                <div className="content-detail lg:py-10 md:py-14 py-10">
+                {/* <HeaderThree /> */}
+                <div className="content-detail pt-8 pb-2">
                     <div className="container">
                         <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
                             <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
 
-  <div className="flex items-center justify-center gap-6">
-                                    <div className="heading3">Chic 1 Bhk In Downtown Dubai Near To Metro Station</div>
+                                <div className="flex items-center  gap-6">
+                                    <div className="heading3">
+                                    <h1 style={{fontSize:'26px',color:'black'}}>Chic 1 BHK In Downtown Dubai Near To Metro Station</h1>
+                                    </div>
                                   
                                 </div>
+                                
                             </div>
                             </div>
                             </div>
                             </div>
+
+
+
+
+
+                          
+                            <div className="grid grid-cols-4 grid-rows-4 gap-2 hidden md:grid " style={{marginLeft:'20px',marginRight:'20px',height:'340px'}}>
+  <div className="col-span-2 row-span-4">
+    <img src="/images/allimg/rooms/1.png" alt="Image 1" className="w-full h-full object-cover "  style={{borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px'}}/>
+  </div>
+  <div className="row-span-2 col-start-3">
+    <img src="/images/allimg/rooms/2.png" alt="Image 2" className="w-full h-full object-cover " />
+  </div>
+  <div className="row-span-2 col-start-4">
+    <img src="/images/allimg/rooms/3.png" alt="Image 3" className="w-full h-full object-cover " style={{borderTopRightRadius:'20px'}}/>
+  </div>
+  <div className="row-span-2 col-start-3 row-start-3">
+    <img src="/images/allimg/rooms/4.png" alt="Image 4" className="w-full h-full object-cover " />
+  </div>
+  <div className="row-span-2 col-start-4 row-start-3">
+    <img src="/images/allimg/rooms/5.png" alt="Image 5" className="w-full h-full object-cover" style={{borderBottomRightRadius:'20px'}}/>
+  </div>
+</div>
+
+{/* Mobile Slider */}
+<div className="md:hidden flex overflow-x-auto gap-4 px-2">
+  {["1.png", "2.png", "3.png", "4.png", "5.png"].map((img, index) => (
+    <div key={index} className="min-w-[100%] max-w-[100%] flex-shrink-0">
+      <img
+        src={`/images/allimg/rooms/${img}`}
+        alt={`Room ${index + 1}`}
+        className="w-full h-60 object-cover rounded-lg"
+      />
+    </div>
+  ))}
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
                 <div className="list-img-detail overflow-hidden">
                     
-                    <Slider {...settings} className="h-full">
+                    {/* <Slider {...settings} className="h-full">
                         {tentMain.listImage.map((img, index) => (
                             <div className="bg-img w-full aspect-[4/3]" key={index}>
                                 <Image
@@ -203,12 +253,65 @@ const TentDetail = () => {
                                 />
                             </div>
                         ))}
-                    </Slider>
+                    </Slider> */}
                 </div>
-                <div className="content-detail lg:py-20 md:py-14 py-10">
+                <div className="content-detail lg:py-8 md:py-14 py-10">
                     <div className="container">
                         <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
                             <div className="content xl:w-2/3 lg:w-[60%] lg:pr-[15px] w-full">
+
+                            <div className="content-detail mb-4">
+                    <div className="container">
+                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+
+                                <div className="flex items-center  gap-6">
+                                    <div className="heading5">
+                                    <h2 style={{color:'black'}}>Entire rental unit in Dubai, United Arab Emirates</h2>
+                                    </div>
+                                  
+                                </div>
+                                <div className="flex items-center  gap-6">
+                                    <div className="heading7">
+                                    <h2 style={{color:'black'}}>4 Guests 
+                                        <span
+                                         style={{
+                                         fontSize: '14px',
+                                         marginLeft: '4px',
+                                         marginRight: '4px',
+                                         display: 'inline-block'
+                                         }}
+                                         aria-hidden="true">
+                                         ·
+                                         </span>
+1 Bedroom                                <span
+                                         style={{
+                                         fontSize: '14px',
+                                         marginLeft: '4px',
+                                         marginRight: '4px',
+                                         display: 'inline-block'
+                                         }}
+                                         aria-hidden="true">
+                                         ·
+                                         </span>1 Bed
+                                         <span
+                                         style={{
+                                         fontSize: '14px',
+                                         marginLeft: '4px',
+                                         marginRight: '4px',
+                                         display: 'inline-block'
+                                         }}
+                                         aria-hidden="true">
+                                         ·
+                                         </span>  2Bathrooms</h2>
+                                    </div>
+                                  
+                                </div>
+                                
+                            </div>
+                            </div>
+                            </div>
+                            </div>
                                 {/* <div className="flex items-center justify-between gap-6">
                                     <div className="heading3">{tentMain.name}</div>
                                     <div className="share w-12 h-12 rounded-full bg-white border border-outline flex-shrink-0 flex items-center justify-center cursor-pointer duration-300 hover:bg-black hover:text-white">
@@ -222,10 +325,51 @@ const TentDetail = () => {
                                     </div>
                                     <Link href={`http://maps.google.com/?q=${tentMain.locationMap.lat},${tentMain.locationMap.lng}`} target='_blank' className='text-primary underline'>Show on map</Link>
                                 </div> */}
-                                <div className="desc lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+
+
+
+<div className="content-detail border-t border-outline pt-2">
+                    <div className="container">
+                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+
+                                <div className="flex items-center  gap-6 pb-4">
+                                    <div className="heading6">
+                                    <div className="heading6">Description</div>
+                                    <div className="body2 text-variant mt-3" >Enjoy a stylish experience at this centrally located place with a peaceful and luxurious skyscraper view. Particularly fits for both family and party vibe people. You will thank us later for the area and location for sure. If u really want the feel of luxurious space and walking distance to metro station , please don’t miss this place.</div>
+                                    </div>
+                                  
+                                </div>
+                               
+                                
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                {/* <div className="desc lg:mt-5 mt-6 lg:pt-5  border-t border-outline">
                                     <div className="heading5">Description</div>
                                     <div className="body2 text-variant1 mt-3">Enjoy a stylish experience at this centrally located place with a peaceful and luxurious skyscraper view. Particularly fits for both family and party vibe people. You will thank us later for the area and location for sure. If u really want the feel of luxurious space and walking distance to metro station , please don’t miss this place.</div>
-                                    {/* <div className={`body2 text-variant1 ${viewMoreDesc ? '' : 'hidden'}`}>{tentMain.description}</div>
+                                    <div className={`body2 text-variant1 ${viewMoreDesc ? '' : 'hidden'}`}>{tentMain.description}</div>
                                     <div
                                         className="text-button-sm underline inline-block duration-300 cursor-pointer mt-3 hover:text-primary"
                                         onClick={() => setViewMoreDesc(!viewMoreDesc)}
@@ -240,8 +384,8 @@ const TentDetail = () => {
                                                 View More
                                             </>
                                         )}
-                                    </div> */}
-                                </div>
+                                    </div>
+                                </div> */}
                                 {/* <div className="rule lg:mt-8 mt-5">
                                     <div className="heading5">House Rules</div>
                                     <div className="list xl:grid grid-cols-3 xl:gap-16 max-xl:flex max-xl:flex-wrap max-xl:gap-8 max-xl:gap-y-2 xl:gap-y-2 mt-4">
@@ -270,9 +414,70 @@ const TentDetail = () => {
 
 
                                 
-                                <div className="feature lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
-                                    {/* <div className="heading5">Amenities and features</div> */}
-                                    {/* <div className="list flex justify-between w-full mt-4">
+
+
+<div className="content-detail  border-t border-outline pt-4 pb-4">
+                    <div className="container">
+                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+
+                                <div className="flex items-center  gap-6">
+                                    <div className="heading5">
+                                    <div className="heading6">Amenities and features</div>
+                                    </div>
+                                  
+                                </div>
+                                <div className="list xl:grid grid-cols-2 xl:gap-16 max-xl:flex max-xl:flex-wrap max-xl:gap-8 max-xl:gap-y-2 xl:gap-y-2 mt-4">
+                                        <div className="flex items-center gap-4">
+                                        <i className="fi fi-rr-restaurant" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2">Kitchen</div>
+                                        </div>
+                                        {/* <div className="flex items-center gap-4">
+                                        <i className="fi fi-rr-desk" style={{ fontSize: '28px',color:'black' }}></i>
+                                            <div className="body2">Dedicated workspace</div>
+                                        </div> */}
+                                        <div className="flex items-center gap-4">
+                                        <i className="fi fi-rr-swimmer" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2">Pool</div>
+                                        </div>
+                                      
+                                        <div className="flex items-center gap-4">
+                                        <i className="fi fi-rr-wifi" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2">Wifi</div>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                        <i className="fi fi-rr-parking-circle" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2"> parking </div>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                        <i className="fi fi-rr-computer" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2">TV</div>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                        <i className="fi fi-rr-air-conditioner"  style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2">Air conditioning</div>
+                                        </div>
+                                        <div className="flex items-center gap-4">
+                                        <i className=" fi fi-rr-camera-cctv" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2">Exterior security cameras on property</div>
+                                        </div>
+                                        {/* <div className="flex items-center gap-2">
+                                        <img src='/images/allimg/icons/kitchen.png'  />
+                                            <div className="body2">Exterior security cameras on property</div>
+                                        </div> */}
+                                    </div>
+                                
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+                                {/* <div className="feature lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+                                    <div className="heading5">Amenities and features</div>
+                                    <div className="list flex justify-between w-full mt-4">
                                         <div className='w-fit'>
                                             <div className="text-title">Services:</div>
                                             <div className="list flex flex-col gap-2 mt-3">
@@ -303,7 +508,7 @@ const TentDetail = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                    </div> */}
+                                    </div>
                                       <div className="rule lg:mt-8 mt-5">
                                     <div className="heading5">Amenities and features</div>
                                     <div className="list xl:grid grid-cols-3 xl:gap-16 max-xl:flex max-xl:flex-wrap max-xl:gap-8 max-xl:gap-y-2 xl:gap-y-2 mt-4">
@@ -339,14 +544,13 @@ const TentDetail = () => {
                                         <img src='/images/allimg/icons/Air.png'  />
                                             <div className="body2">Air conditioning</div>
                                         </div>
-                                        {/* <div className="flex items-center gap-2">
-                                        <img src='/images/allimg/icons/kitchen.png'  />
-                                            <div className="body2">Exterior security cameras on property</div>
-                                        </div> */}
+                                        
                                     </div>
                                 </div>
-                                </div>
-                                <div className="explore-block lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+                                </div> */}
+
+
+                                {/* <div className="explore-block lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                     <div className="heading5">Explore Camp</div>
                                     <div className="bg-img rounded-2xl max-sm:h-[240px] relative overflow-hidden sm:aspect-[2/1] mt-4">
                                         <ExploreCamp />
@@ -361,22 +565,62 @@ const TentDetail = () => {
                                             />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="date lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
-                                    <div className="heading5">Dates & Availability</div>
-                                    <div className="bg-img relative mt-1">
+                                </div> */}
+
+
+<div className="content-detail border-t border-outline pt-4" >
+                    <div className="container">
+                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+
+                                <div className="flex items-center  gap-6">
+                                    <div className="heading6">
+                                    <div className="heading6">Dates & Availability</div>
+                                    <div className="bg-img relative mt-1 lg:w-[90%]">
                                         <DateRangePicker
                                             className={`form-date-picker style-detail w-full border border-outline rounded-none open`}
                                             onChange={item => setState([item.selection] as any)}
                                             // showSelectionPreview={true}
+                                            
                                             moveRangeOnFirstSelection={false}
                                             months={2}
                                             ranges={state}
                                             direction="horizontal"
                                         />
                                     </div>
+                                    </div>
+                                  
                                 </div>
-                                <div className="map lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+                               
+                                
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+                                {/* <div className="date lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+                                    <div className="heading5">Dates & Availability</div>
+                                    <div className="bg-img relative mt-1">
+                                        <DateRangePicker
+                                            className={`form-date-picker style-detail w-full border border-outline rounded-none open`}
+                                            onChange={item => setState([item.selection] as any)}
+                                            
+                                            moveRangeOnFirstSelection={false}
+                                            months={2}
+                                            ranges={state}
+                                            direction="horizontal"
+                                        />
+                                    </div>
+                                </div> */}
+
+
+
+
+
+                                {/* <div className="map lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                     <div className="heading5">Map</div>
                                     <div className="bg-img relative mt-3">
                                         <iframe
@@ -384,14 +628,14 @@ const TentDetail = () => {
                                             src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352341.87716351956!2d55.22748795!3d25.076022449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1743760223023!5m2!1sen!2sin`}
                                         ></iframe>
                                     </div>
-                                </div>
-                                <div className="review-block lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+                                </div> */}
+                                {/* <div className="review-block lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                     <div className="flex items-center justify-between">
                                         <div className="heading5">Guest reviews</div>
                                         <Link href={'#form-review'} className='text-button-sm px-5 py-2 rounded-lg border border-black duration-300 hover:bg-primary hover:text-white hover:border-primary'>Add Reviews</Link>
                                     </div>
                                     <div className="list-review lg:pt-4 pt-2">
-                                        {testimonialData.slice(0, 3).map((item, index) => (
+                                        {testimonialData.slice(0, 2).map((item, index) => (
                                             <div key={index} className="item flex gap-5 md:mt-6 mt-4">
                                                 <div className="avatar w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
                                                     <Image
@@ -411,111 +655,114 @@ const TentDetail = () => {
                                                     <div className="date mt-1 text-variant2">{item.date}</div>
                                                     <Rate currentRate={item.star} classname='mt-2' />
                                                     <div className="body2 mt-2">{item.description}</div>
-                                                    {item.images.length !== 0 && (
-                                                        <div className="list-img flex items-center gap-4 mt-4">
-                                                            {item.images.map((img, index) => (
-                                                                <Image
-                                                                    key={index}
-                                                                    src={img}
-                                                                    width={400}
-                                                                    height={400}
-                                                                    priority={true}
-                                                                    alt={item.name}
-                                                                    className='w-[60px] h-[60px] object-cover'
-                                                                />
-                                                            ))}
-                                                        </div>
-                                                    )}
+                                                  
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
-                                    {/* <div className="caption1 font-bold underline duration-300 cursor-pointer hover:text-primary">See more answered questions (719)</div> */}
-                                    <div id="form-review" className='mt-6 pt-6 border-t border-outline'>
-                                        <div className="heading5">Leave A Reply</div>
-                                        <div className="text-variant1 mt-2">Your email address will not be published</div>
-                                        <div className="list-star xl:grid xl:grid-cols-5 gap-10 max-xl:flex flex-wrap gap-y-5 bg-surface p-6 rounded-2xl mt-6">
-                                            <div className="item">
-                                                <div>Location</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Rooms</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Services</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Cleanliness</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Value for money</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Comfortable</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Facilities</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Breakfast</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                            <div className="item">
-                                                <div>Food</div>
-                                                <Rate currentRate={4} classname='mt-2' />
-                                            </div>
-                                        </div>
-                                        <form className="grid sm:grid-cols-2 gap-4 gap-y-5 mt-6">
-                                            <div className="name ">
-                                                <label htmlFor="username" className='text-variant1'>Name</label>
-                                                <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg mt-3" id="username" type="text" placeholder="Your Name *" required />
-                                            </div>
-                                            <div className="mail ">
-                                                <label htmlFor="email" className='text-variant1'>Email</label>
-                                                <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg mt-3" id="email" type="email" placeholder="Your Email *" required />
-                                            </div>
-                                            <div className="col-span-full review">
-                                                <label htmlFor="review" className='text-variant1'>Review</label>
-                                                <textarea className="border border-line px-4 py-3 w-full rounded-lg mt-3" rows={3} id="review" name="review" placeholder="Write comment *" required ></textarea>
-                                            </div>
-                                            <div className="col-span-full flex items-start -mt-2 gap-2">
-                                                <input type="checkbox" id="saveAccount" name="saveAccount" className='mt-1.5' />
-                                                <label className="" htmlFor="saveAccount">Save your name, email for the next time review</label>
-                                            </div>
-                                            <div className="col-span-full">
-                                                <button className='button-main'>Post comment</button>
-                                            </div>
-                                        </form>
+                                   
+                                </div> */}
+
+
+
+
+                                <div className="content-detail  border-outline pt-2">
+                    <div className="container">
+                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+                            <div className="review-block lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
+                                    <div className="flex items-center justify-between">
+                                        <div className="heading5">Guest reviews</div>
+                                        <Link href={'#form-review'} className='text-button-sm px-5 py-2 rounded-lg border duration-300 hover:bg-[#f6dd49] hover:text-white hover:border-white bg-[#32548e] text-white'>Add Reviews</Link>
                                     </div>
+                                    <div className="list-review lg:pt-4 pt-2">
+                                        {testimonialData.slice(0, 2).map((item, index) => (
+                                            <div key={index} className="item flex gap-5 md:mt-6 mt-4">
+                                                <div className="avatar w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
+                                                    <Image
+                                                        src={item.avatar}
+                                                        width={400}
+                                                        height={400}
+                                                        alt={item.name}
+                                                        priority={true}
+                                                        className='w-full h-full object-cover'
+                                                    />
+                                                </div>
+                                                <div className='review pb-6 border-b border-outline'>
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="heading5">{item.name}</div>
+                                                        <Icon.CheckCircle weight='fill' className='text-success' />
+                                                    </div>
+                                                    <div className="date mt-1 text-variant2">{item.date}</div>
+                                                    <Rate currentRate={item.star} classname='mt-2' />
+                                                    <div className="body2 mt-2">{item.description}</div>
+                                                  
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                   
                                 </div>
+                               
+                                
                             </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+                                
+{/* <div className="content-detail border-t">
+                    <div className="container">
+                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+
+                                <div className="flex items-center  gap-6">
+                                    <div className="heading6">
+                                    <div className="heading5">Map</div>
+                                    <div className="body2 text-variant mt-3" ><div className="bg-img relative mt-3">
+                                        <iframe
+                                            className='w-full h-[360px]'
+                                            src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352341.87716351956!2d55.22748795!3d25.076022449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1743760223023!5m2!1sen!2sin`}
+                                        ></iframe>
+                                    </div></div>
+                                    </div>
+                                  
+                                </div>
+                               
+                                
+                            </div>
+                            </div>
+                            </div>
+                            </div> */}
+
+                            
+                            </div>
+
+
+                            
                             <div className="sidebar xl:w-1/3 lg:w-[40%] lg:pl-[45px] w-full">
-                                <StickyBox offsetTop={100} offsetBottom={20}>
-                                    <div className="reservation bg-surface p-6 rounded-md">
-                                        <div className="heading4 text-center">Reservation</div>
-                                        <div className="date-sidebar-detail bg-white border border-outline mt-5">
+                                <StickyBox offsetTop={100} offsetBottom={20} >
+                                    <div className="reservation bg-surface p-6 rounded-md"  style={{boxShadow:' rgba(20, 20, 20, 0.32) 0px 6px 16px',border:'1px solid rgb(221, 221, 221)',borderRadius:'20px'}}>
+                                        <div className="heading6 text-start">Add dates for prices</div>
+                                        <div className="date-sidebar-detail bg-white border  mt-5 " style={{borderRadius:'10px'}}>
                                             <div className="relative cursor-pointer">
-                                                <div className="grid grid-cols-2 border-b border-outline" onClick={handleOpenDate}>
-                                                    <div className="left pl-5 py-4 border-r border-outline">
+                                                <div className="grid grid-cols-2 border-b border-separate" onClick={handleOpenDate}>
+                                                    <div className="left pl-5 py-4 border-r border-separate">
+                                                    {/* <div className="left pl-5 py-4 border-r border-outline"> */}
                                                         <div className="flex items-center gap-1">
                                                             <Icon.CalendarBlank className='text-xl' />
-                                                            <div className="text-button">Check In</div>
+                                                            <div className="text-button " style={{fontSize:'12px',fontWeight:'bolder'}}>Check In</div>
                                                         </div>
-                                                        <div className="body2 mt-1">{state[0].startDate.toLocaleDateString()}</div>
+                                                        <div className="body2 mt-1" style={{fontSize:'12px',fontWeight:'bolder'}}>{state[0].startDate.toLocaleDateString()}</div>
                                                     </div>
                                                     <div className="left pr-5 py-4">
                                                         <div className="flex items-center justify-end gap-1">
                                                             <Icon.CalendarBlank className='text-xl' />
-                                                            <div className="text-button">Check Out</div>
+                                                            <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}> Check Out</div>
                                                         </div>
-                                                        <div className="body2 mt-1 text-end">{state[0].endDate.toLocaleDateString()}</div>
+                                                        <div className="body2 mt-1 text-end" style={{fontSize:'12px',fontWeight:'bolder'}}>{state[0].endDate.toLocaleDateString()}</div>
                                                     </div>
                                                 </div>
                                                 <DateRangePicker
@@ -532,17 +779,17 @@ const TentDetail = () => {
                                                     <div>
                                                         <div className="flex items-center gap-1">
                                                             <Icon.Users className='text-xl' />
-                                                            <div className="text-button">Guest</div>
+                                                            <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>Guest</div>
                                                         </div>
-                                                        <div className="body2 mt-1">{guest.adult} adults - {guest.children} childrens</div>
+                                                        <div className="body2 mt-1" style={{fontSize:'12px',fontWeight:'bolder'}}>{guest.adult} adults - {guest.children} childrens</div>
                                                     </div>
                                                     <Icon.CaretDown className='text-2xl' />
                                                 </div>
                                                 <div className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full -mt-px left-0 w-full box-shadow ${openGuest ? 'open' : ''}`}>
                                                     <div className="item flex items-center justify-between pb-4 border-b border-outline">
                                                         <div className="left">
-                                                            <p>Adults</p>
-                                                            <div className="caption1 text-variant1">(12 Years+)</div>
+                                                            <p className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>Adults</p>
+                                                            <div className="caption1 text-variant1" style={{fontSize:'12px',fontWeight:'bolder'}}>(12 Years+)</div>
                                                         </div>
                                                         <div className="right flex items-center gap-5">
                                                             <div
@@ -551,7 +798,7 @@ const TentDetail = () => {
                                                             >
                                                                 <Icon.Minus weight='bold' />
                                                             </div>
-                                                            <div className="text-title">{guest.adult}</div>
+                                                            <div className="text-title" >{guest.adult}</div>
                                                             <div
                                                                 className="plus w-8 h-8 flex items-center justify-center rounded-full border border-outline cursor-pointer duration-300 hover:bg-black hover:text-white"
                                                                 onClick={() => increaseGuest('adult')}
@@ -562,7 +809,7 @@ const TentDetail = () => {
                                                     </div>
                                                     <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
                                                         <div className="left">
-                                                            <p>Children</p>
+                                                            <p className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>Children</p>
                                                             <div className="caption1 text-variant1">(2-12 Years)</div>
                                                         </div>
                                                         <div className="right flex items-center gap-5">
@@ -581,7 +828,7 @@ const TentDetail = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
+                                                    {/* <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
                                                         <div className="left">
                                                             <p>Infants</p>
                                                             <div className="caption1 text-variant1">(0-2 Years)</div>
@@ -601,10 +848,10 @@ const TentDetail = () => {
                                                                 <Icon.Plus weight='bold' />
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                     <div className="item flex items-center justify-between pb-4 pt-4">
                                                         <div className="left">
-                                                            <p>Pets</p>
+                                                            <p className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>Pets</p>
                                                         </div>
                                                         <div className="right flex items-center gap-5">
                                                             <div
@@ -631,7 +878,7 @@ const TentDetail = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="services bg-white px-5 py-4 mt-5 border border-outline">
+                                        {/* <div className="services bg-white px-5 py-4 mt-5 border border-outline">
                                             <div className="text-button">Add Services</div>
                                             <div className="list flex flex-col gap-2 mt-3">
                                                 {tentMain.services.map((item, index) => (
@@ -641,8 +888,7 @@ const TentDetail = () => {
                                                                 type="checkbox"
                                                                 name={item}
                                                                 id={item}
-                                                            // checked={amenities.includes(item)}
-                                                            // onChange={() => handleAmenities(item)}
+                                                           
                                                             />
                                                             <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
                                                         </div>
@@ -650,32 +896,32 @@ const TentDetail = () => {
                                                     </div>
                                                 ))}
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="price-block mt-5">
-                                            <div className="heading6">Price Summary</div>
+                                            <div className="heading6 text-start">Price Summary</div>
                                             <div className="list mt-2">
                                                 <div className="flex items-center justify-between">
-                                                    <div>$200 x 5 Nights</div>
-                                                    <div className="text-button">05 x $200</div>
+                                                    <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>$200 x 5 Nights</div>
+                                                    <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>05 x $200</div>
                                                 </div>
-                                                <div className="flex items-center justify-between mt-1">
-                                                    <div>Cleaning Fee</div>
+                                                {/* <div className="flex items-center justify-between mt-1">
+                                                    <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>Cleaning Fee</div>
                                                     <div className="text-button">$40</div>
                                                 </div>
                                                 <div className="flex items-center justify-between mt-1">
                                                     <div>Services Fee</div>
                                                     <div className="text-button">$60</div>
-                                                </div>
+                                                </div> */}
                                             </div>
                                             <div className="total-block mt-5 pt-5 border-t border-outline flex items-center justify-between">
                                                 <div className="heading6">Total Before Taxes</div>
                                                 <div className="heading5">$1100</div>
                                             </div>
-                                            <div className="button-main w-full text-center mt-5">Booking Tent</div>
+                                            <div className="button-main w-full text-center mt-5">Booking Room</div>
                                         </div>
                                     </div>
 
-                                    <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
+                                    {/* <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
                                         <div className="bg-img relative">
                                             <iframe
                                                 className='w-full lg:h-[200px] sm:h-[350px] h-[300px]'
@@ -691,9 +937,9 @@ const TentDetail = () => {
                                             <Icon.Envelope className='text-variant1' />
                                             <span>hi.avitex@gmail.com</span>
                                         </div>
-                                    </div>
+                                    </div> */}
 
-                                    <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
+                                    {/* <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
                                         <div className="heading6 mt-5">Property Hightlishts</div>
                                         <div className="text-title mt-4">Breakfast Info</div>
                                         <div className="text-variant1 mt-1">Continental, Breakfast to go</div>
@@ -712,9 +958,9 @@ const TentDetail = () => {
                                                 <div>Currency exchange</div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
 
-                                    <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
+                                    {/* <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
                                         <div className="heading6 mt-5">Why Book With Us?</div>
                                         <div className="list mt-4">
                                             <div className="flex items-center gap-2">
@@ -734,13 +980,39 @@ const TentDetail = () => {
                                                 <div>Available Support 24/7</div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
+
+
                                 </StickyBox>
                             </div>
+
+                            
                         </div>
+
+                        {/* map */}
+                        <div className="content-detail ">
+  <div className="container">
+    <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+      <div className="w-full lg:pr-[15px]">
+        <div className="heading5 mb-3">Map</div>
+        <div className="relative">
+          <iframe
+            className="w-full h-[360px] rounded-lg"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352341.87716351956!2d55.22748795!3d25.076022449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1743760223023!5m2!1sen!2sin"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
                     </div>
                 </div>
-                {/* <Footer /> */}
+                <Footer />
             </div>
         </>
     )

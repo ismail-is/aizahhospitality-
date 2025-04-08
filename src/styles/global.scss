@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css');
+
+
+
+
 
 /* Main color */
 :root {
-    --primary: #E05028;
-    --primary-hover: #c42e04;
+    --primary: #32548e;
+    --primary-hover: #f6dd49;
     --black: #382C28;
     --variant1: #776E6B;
     --variant2: #B4ABA8;
     --white: #ffffff;
     --outline: #E4E4E4;
     --surface: #F8F8F8;
-    --red: #C72929;
+    --red: #f6dd49;
     --success: #37B853;
-    --yellow: #F4D118;
+    --yellow: #f6dd49;
     --line: #E9E9E9;
 }
 
@@ -36,8 +42,8 @@ body {
     line-height: 26px;
     color: var(--black);
     font-weight: 400;
-    user-select: none;
-    font-family: 'DM Sans', sans-serif !important;
+    // user-select: none;
+    font-family: 'Inter', sans-serif !important;
 }
 
 div,
@@ -113,7 +119,7 @@ textarea:focus {
     width: 100%;
     padding-right: 16px;
     padding-left: 16px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .bg-linear {
@@ -133,7 +139,7 @@ textarea:focus {
     line-height: 88px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .heading2 {
@@ -141,15 +147,15 @@ textarea:focus {
     line-height: 68px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .heading3 {
-    font-size: 44px;
-    line-height: 52px;
+    font-size: 26px;
+    line-height: 32px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .heading4 {
@@ -157,7 +163,7 @@ textarea:focus {
     line-height: 40px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .heading5 {
@@ -165,14 +171,14 @@ textarea:focus {
     line-height: 32px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .heading6 {
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .text-title {
@@ -180,7 +186,7 @@ textarea:focus {
     line-height: 28px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .text-button {
@@ -189,14 +195,14 @@ textarea:focus {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.28px;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .text-button-sm {
     font-size: 14px;
     line-height: 22px;
     font-weight: 600;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .body2 {
@@ -223,7 +229,7 @@ textarea:focus {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.96px;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
 }
 
 .button-main {
@@ -231,7 +237,7 @@ textarea:focus {
     line-height: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family:Inter,'sans-serif' ;
     letter-spacing: 1.28px;
     color: var(--white);
     background-color: var(--primary);
@@ -242,7 +248,7 @@ textarea:focus {
     transition: all ease 0.4s;
 
     &:hover {
-        background-color: #c42e04;
+        background-color: #ddce74;
 
         svg {
             path {

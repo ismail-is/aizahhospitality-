@@ -14,7 +14,7 @@ const ExploreCamp: React.FC = props => {
     useEffect(() => {
         viewer.current = pannellum.viewer(id, {
             autoLoad: true,
-            panorama: "/images/other/850x400.jpg",
+            panorama: "/images/allimg/rooms/361.png",
             dynamicUpdate: true,
             compass: false,
             friction: 0,

@@ -227,8 +227,8 @@ const HeaderOne = () => {
                             </li>
                         </ul>
                     </div>
-                    {/* <div className="right flex items-center gap-3">
-                        <div className="weather flex items-center gap-1 max-sm:hidden">
+                    <div className="right flex items-center gap-3">
+                        {/* <div className="weather flex items-center gap-1 max-sm:hidden">
                             <Icon.CloudSun className='text-xl' />
                             <div className="text-button">18°C</div>
                         </div>
@@ -242,11 +242,11 @@ const HeaderOne = () => {
                                 <option value="GE">GE</option>
                             </select>
                             <Icon.CaretDown className='icon text-base right-0' />
-                        </div>
+                        </div> */}
                         <div className="menu-mobile-icon lg:hidden flex items-center ml-4" onClick={() => setOpenMenuMobile(true)}>
                             <Icon.List className='sm:text-xl text-2xl text-black' weight='bold' />
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </div>
 

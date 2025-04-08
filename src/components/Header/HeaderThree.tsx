@@ -130,16 +130,17 @@ const HeaderThree = () => {
             <div id="header" className='header'>
                 <div className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-between ${fixedHeader ? 'fixed box-shadow' : ''}`}>
                     <Link href={'/'} className="logo">
-                        <Image
-                            src={'/images/logo.png'}
-                            width={2000}
-                            height={1000}
-                            alt='logo'
-                            priority={true}
-                            className='sm:w-[220px] w-[160px]'
-                        />
+                         <Image
+                                                 src={'/images/allimg/logo/logo.jpg'}
+                                                 width={100}
+                                                 height={100}
+                                                 alt='logo'
+                                                 priority={true}
+                                                 className='sm:w-[100px] w-[100px]'
+                                                 style={{marginTop:'10px',borderRadius:'0 5px 5px 5px'}}
+                                             />
                     </Link>
-                    <div className="menu-main style-three relative flex items-center justify-center gap-5 max-xl:hidden">
+                    <div className="menu-main style-three relative flex items-center justify-center gap-2 max-xl:hidden">
                         <div className="select-block item flex items-center gap-2 py-2.5 border border-outline rounded-lg">
                             <Icon.MapPin className='icon text-xl left-5' />
                             <input
@@ -232,7 +233,7 @@ const HeaderThree = () => {
                         </div>
                     </div>
                     <div className="right flex items-center gap-3">
-                        <div className="weather flex items-center gap-1 max-sm:hidden">
+                        {/* <div className="weather flex items-center gap-1 max-sm:hidden">
                             <Icon.CloudSun className='text-xl' />
                             <div className="text-button">18°C</div>
                         </div>
@@ -250,7 +251,46 @@ const HeaderThree = () => {
                         <div className='bg-outline w-px h-4 max-sm:hidden'></div>
                         <div className="menu-mobile-icon flex items-center cursor-pointer" onClick={() => setOpenMenuMobile(!openMenuMobile)}>
                             <Icon.List className='sm:text-xl text-2xl text-black' weight='bold' />
-                        </div>
+                        </div> */}
+<div className="menu-main h-full max-lg:hidden">
+                        <ul className='flex items-center xl:gap-[10px] gap-10 h-full'>
+                           
+
+                            <li className='h-full relative'>
+                                <Link
+                                    href="#"
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                >
+                                    Home
+                                </Link>
+                            </li>
+                            <li className='h-full relative'>
+                                <Link
+                                    href="#"
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                >
+                                    About us
+                                </Link>
+                            </li>
+                            <li className='h-full relative'>
+                                <Link
+                                    href="/camp/tent-detail"
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                >
+                                   Room
+                                </Link>
+                            </li>
+                            <li className='h-full relative'>
+                                <Link
+                                    href="#"
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                >
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
                     </div>
                 </div>
             </div>

@@ -28,7 +28,7 @@ const Footer = () => {
                                     <Link href={'https://www.facebook.com/'} target='_blank'
                                         className='bg-white duration-300 hover:bg-primary hover:text-white w-10 h-10 rounded-full flex items-center justify-center'
                                     >
-                                        <span className='icon-facebook text-sm'></span>
+                                        <span className='fi fi-brands-facebook'></span>
                                     </Link>
                                     <Link href={'https://www.linkedin.com/'} target='_blank'
                                         className='bg-white duration-300 hover:bg-primary hover:text-white w-10 h-10 rounded-full flex items-center justify-center'
@@ -69,50 +69,49 @@ const Footer = () => {
                                     </svg>
                                     <div>
                                         <div className="caption1 text-variant1">Need help? 24/7</div>
-                                        <div className="text-title">001-1234-88888</div>
+                                        <div className="text-title">001-1234-12345</div>
                                     </div>
                                 </div>
-                                <div className="caption1 mt-5">Book Glamping Hassle-Free with GlampHub and Boost Your Income.</div>
+                                <div className="caption1 mt-5">Aizah Hospitality </div>
                                 <div className="location flex items-center gap-2 mt-3">
                                     <Icon.MapPin className='caption1' />
-                                    <div className="caption1">101 E 129th St, East Chicago, IN 46312, US</div>
+                                    <div className="caption1">
+                                    Dubai - United Arab Emirates</div>
                                 </div>
-                                <div className="form-search mt-5">
+                                {/* <div className="form-search mt-5">
                                     <form className='w-full relative rounded-lg overflow-hidden'>
                                         <input type="email" required placeholder='Your email address' className='caption1 h-[46px] pl-4 pr-14 w-full rounded-lg' />
                                         <button className='w-12 h-full bg-primary flex items-center justify-center flex-shrink-0 absolute top-0 right-0 text-white duration-300 hover:bg-[#c42e04]'>
                                             <Icon.PaperPlaneTilt weight='bold' className='text-xl' />
                                         </button>
                                     </form>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="list-nav lg:w-2/3 w-full sm:flex max-sm:grid grid-cols-2 gap-8 justify-between">
                                 <div className="item">
-                                    <div className="text-title pb-3">Support</div>
-                                    <Link href={'/pages/contact'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Help Center</Link>
-                                    <Link href={'/pages/contact'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Contact Us</Link>
-                                    <Link href={'/pages/faqs'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Glamp FAQ</Link>
-                                    <Link href={'/term-of-use'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Booking Policy</Link>
-                                    <Link href={'/term-of-use'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Booking Guide</Link>
-                                    <Link href={'/pages/review'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Feedback</Link>
+                                    <div className="text-title pb-3">pages</div>
+                                    <Link href={'#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Home</Link>
+                                    <Link href={'#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">About us</Link>
+                                    <Link href={'#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                    <Link href={'#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Contact</Link>
+                                   
                                 </div>
                                 <div className="item">
-                                    <div className="text-title pb-3">About Us</div>
-                                    <Link href={'/about'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">About Us</Link>
-                                    <Link href={'/about'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Our Story</Link>
-                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Journal</Link>
-                                    <Link href={'/blog/blog-default'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Late News</Link>
-                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Site Map</Link>
-                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Partnerships</Link>
+                                    <div className="text-title pb-3">Room</div>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                  
                                 </div>
                                 <div className="item">
-                                    <div className="text-title pb-3">Hosting</div>
-                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Become A Host</Link>
-                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Insurance</Link>
-                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Standards</Link>
-                                    <Link href={'#!'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2">Hosting FAQ</Link>
+                                    <div className="text-title pb-3">Room</div>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
+                                    <Link href={'/#'} className="caption1 text-variant1 has-line block w-fit whitespace-nowrap">Room</Link>
                                 </div>
-                                <div className="item">
+                                {/* <div className="item">
                                     <div className="text-title pb-4">Download App</div>
                                     <Link href={'#!'}>
                                         <Image
@@ -134,7 +133,7 @@ const Footer = () => {
                                             className='w-[135px] mt-2'
                                         />
                                     </Link>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -142,13 +141,18 @@ const Footer = () => {
                     <div className="footer-bottom py-4 border-t border-outline">
                         <div className="container">
                             <div className="flex items-center sm:justify-between justify-center flex-wrap gap-4">
-                                <div className="copyright caption1 text-variant1">©2023 GlampHub. All Rights Reserved.</div>
+                                <div className="copyright caption1 text-variant1">©2025 Aizah Hospitality . All Rights Reserved.</div>
                                 <div className="flex items-center gap-3">
-                                    <Link href={'/term-of-use'} className='caption1 text-variant1 has-line'>Terms Of Services</Link>
+                                    <Link href={'/#'} className='caption1 text-variant1 has-line'>Terms Of Services</Link>
+                                    <div className='bg-outline w-px h-4'></div>
+                                    <Link href={'/#'} className='caption1 text-variant1 has-line'>Privacy Policy</Link>
+                                    <div className='bg-outline w-px h-4'></div>
+                                    <Link href={'/#'} className='caption1 text-variant1 has-line'>Cookie Policy</Link>
+                                    {/* <Link href={'/term-of-use'} className='caption1 text-variant1 has-line'>Terms Of Services</Link>
                                     <div className='bg-outline w-px h-4'></div>
                                     <Link href={'/term-of-use'} className='caption1 text-variant1 has-line'>Privacy Policy</Link>
                                     <div className='bg-outline w-px h-4'></div>
-                                    <Link href={'/term-of-use'} className='caption1 text-variant1 has-line'>Cookie Policy</Link>
+                                    <Link href={'/term-of-use'} className='caption1 text-variant1 has-line'>Cookie Policy</Link> */}
                                 </div>
                             </div>
                         </div>

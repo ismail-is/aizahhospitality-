@@ -4,9 +4,9 @@
         "name": "FAhad",
         "position": "Ethical Hacker",
         "avatar": "/images/avatar/60x60.png",
-        "date": "3 days ago",
+        "date": "4 days ago",
         "address": "Tokyo, Japan",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis",
+        "description": "I had an amazing stay at this beautiful studio in Damac Merano! From the moment I walked in, I was blown away by the sleek and modern aesthetic of the space. The decor was minimal yet stylish, with neutral tones and thoughtful touches that created such a calm and inviting atmosphere. The studio was incredibly well-maintained, clean, and had all the amenities I could possibly need for a comfortable stay.",
         "images": [
             "/images/tent/900x900.png",
             "/images/tent/900x900.png",
@@ -17,12 +17,12 @@
     },
     {
         "id": "2",
-        "name": "Review 2",
-        "position": "Ethical Hacker",
+        "name": "Mohammed Raazi",
+        "position": "6 days ago",
         "avatar": "/images/avatar/60x60.png",
-        "date": "April 4, 2025",
+        "date": "6 days ago",
         "address": "Tokyo, Japan",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis",
+        "description": "I had an amazing stay at this 2-bedroom unit near downtown. The apartment was spotless, and the canal views were breathtaking. The hosts were exceptionally hospitable and responsive, providing helpful recommendations throughout my stay. The location was perfect for exploring the city. I highly recommend this property to anyone visiting the area.",
         "images": [
             "/images/tent/900x900.png",
             "/images/tent/900x900.png",

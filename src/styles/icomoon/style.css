@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?et5oy7');
   src:  url('fonts/icomoon.eot?et5oy7#iefix') format('embedded-opentype'),
@@ -8,11 +8,24 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
+} */
+
+/* custome */
+@font-face {
+  font-family: 'Inter';
+  src:  url('fonts/customeFont/AirbnbCereal_W_Bk.otf');
+  src:  url('fonts/customeFont/AirbnbCereal_W_Bk.otf') format('embedded-opentype'),
+    url('fonts/customeFont/AirbnbCereal_W_Bk.otf') format('truetype'),
+    url('fonts/customeFont/AirbnbCereal_W_Bk.otf') format('woff'),
+    url('fonts/customeFont/AirbnbCereal_W_Bk.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'Inter' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
