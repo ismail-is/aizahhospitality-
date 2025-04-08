@@ -437,7 +437,7 @@ const TentDetail = () => {
                                             <div className="body2">Dedicated workspace</div>
                                         </div> */}
                                         <div className="flex items-center gap-4">
-                                        <i className="fi fi-rr-swimmer" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                        <div className="fi fi-rr-swimmer" style={{ fontSize: '28px',color:'#32548e' }}></div>
                                             <div className="body2">Pool</div>
                                         </div>
                                       
