@@ -171,10 +171,10 @@ const TentDetail = () => {
 
     return (
         <>
-            <div className='ten-detail'>
+            <div className='ten-detail  lg:ml-10 lg:mr-10' >
                 <HeaderOne />
-                {/* <HeaderThree /> */}
-                <div className="content-detail pt-8 pb-2">
+                <HeaderThree />
+                <div className="content-detail pt-8 pb-2 lg:ml-8 lg:mr-10">
                     <div className="container">
                         <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
                             <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
@@ -192,11 +192,18 @@ const TentDetail = () => {
                             </div>
 
 
+                            
+
+
+
+
+
+
 
 
 
                           
-                            <div className="grid grid-cols-4 grid-rows-4 gap-2 hidden md:grid " style={{marginLeft:'20px',marginRight:'20px',height:'340px'}}>
+                            {/* <div className="grid grid-cols-4 grid-rows-4 gap-2 hidden md:grid " style={{marginLeft:'20px',marginRight:'20px',height:'340px'}}>
   <div className="col-span-2 row-span-4">
     <img src="/images/allimg/rooms/1.png" alt="Image 1" className="w-full h-full object-cover "  style={{borderTopLeftRadius:'20px',borderBottomLeftRadius:'20px'}}/>
   </div>
@@ -212,7 +219,76 @@ const TentDetail = () => {
   <div className="row-span-2 col-start-4 row-start-3">
     <img src="/images/allimg/rooms/5.png" alt="Image 5" className="w-full h-full object-cover" style={{borderBottomRightRadius:'20px'}}/>
   </div>
+</div> */}
+
+
+
+
+
+<div className="content-detail   pt-2 w-full">
+  <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col-reverse lg:flex-row gap-y-10 justify-between w-full">
+
+      <div className="content w-full lg:pr-[15px]">
+        <div className="flex items-center gap-6 pb-4 w-full">
+          <div className="heading6 w-full">
+            <div
+              className="grid grid-cols-4 grid-rows-4 gap-2 hidden md:grid w-full"
+              style={{height: '340px' }}
+            >
+              <div className="col-span-2 row-span-4">
+                <img
+                  src="/images/allimg/rooms/1.png"
+                  alt="Image 1"
+                  className="w-full h-full object-cover"
+                  style={{ borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px' }}
+                />
+              </div>
+              <div className="row-span-2 col-start-3">
+                <img
+                  src="/images/allimg/rooms/2.png"
+                  alt="Image 2"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="row-span-2 col-start-4">
+                <img
+                  src="/images/allimg/rooms/3.png"
+                  alt="Image 3"
+                  className="w-full h-full object-cover"
+                  style={{ borderTopRightRadius: '20px' }}
+                />
+              </div>
+              <div className="row-span-2 col-start-3 row-start-3">
+                <img
+                  src="/images/allimg/rooms/4.png"
+                  alt="Image 4"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="row-span-2 col-start-4 row-start-3">
+                <img
+                  src="/images/allimg/rooms/5.png"
+                  alt="Image 5"
+                  className="w-full h-full object-cover"
+                  style={{ borderBottomRightRadius: '20px' }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
 
 {/* Mobile Slider */}
 <div className="md:hidden flex overflow-x-auto gap-4 px-2">
@@ -303,7 +379,7 @@ const TentDetail = () => {
                                          }}
                                          aria-hidden="true">
                                          ·
-                                         </span>  2Bathrooms</h2>
+                                         </span>  2 Bathrooms</h2>
                                     </div>
                                   
                                 </div>
@@ -437,7 +513,7 @@ const TentDetail = () => {
                                             <div className="body2">Dedicated workspace</div>
                                         </div> */}
                                         <div className="flex items-center gap-4">
-                                        <div className="fi fi-rr-swimmer" style={{ fontSize: '28px',color:'#32548e' }}></div>
+                                        <span className="fi fi-rr-swimmer" style={{ fontSize: '28px',color:'#32548e' }}></span>
                                             <div className="body2">Pool</div>
                                         </div>
                                       
@@ -458,8 +534,8 @@ const TentDetail = () => {
                                             <div className="body2">Air conditioning</div>
                                         </div>
                                         <div className="flex items-center gap-4">
-                                        <i className=" fi fi-rr-camera-cctv" style={{ fontSize: '28px',color:'#32548e' }}></i>
-                                            <div className="body2">Exterior security cameras on property</div>
+                                        <i className=" fi fi-rr-doctor" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                            <div className="body2">First aid kit</div>
                                         </div>
                                         {/* <div className="flex items-center gap-2">
                                         <img src='/images/allimg/icons/kitchen.png'  />
@@ -568,35 +644,33 @@ const TentDetail = () => {
                                 </div> */}
 
 
-<div className="content-detail border-t border-outline pt-4" >
-                    <div className="container">
-                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
-                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+<div className="content-detail border-t border-outline pt-4">
+  <div className="container">
+    <div className="flex flex-col lg:flex-row-reverse gap-y-10 justify-between">
+      
+      <div className="content w-full lg:w-[100%] lg:pr-[15px]">
+        <div className="flex flex-col gap-4">
+          
+          <div className="heading6">Dates & Availability</div>
 
-                                <div className="flex items-center  gap-6">
-                                    <div className="heading6">
-                                    <div className="heading6">Dates & Availability</div>
-                                    <div className="bg-img relative mt-1 lg:w-[90%]">
-                                        <DateRangePicker
-                                            className={`form-date-picker style-detail w-full border border-outline rounded-none open`}
-                                            onChange={item => setState([item.selection] as any)}
-                                            // showSelectionPreview={true}
-                                            
-                                            moveRangeOnFirstSelection={false}
-                                            months={2}
-                                            ranges={state}
-                                            direction="horizontal"
-                                        />
-                                    </div>
-                                    </div>
-                                  
-                                </div>
-                               
-                                
-                            </div>
-                            </div>
-                            </div>
-                            </div>
+          <div className="bg-img relative w-full mt-1">
+            <DateRangePicker
+              className="form-date-picker style-detail w-full border border-outline rounded-none open"
+              onChange={item => setState([item.selection] as any)}
+              moveRangeOnFirstSelection={false}
+              months={2}
+              ranges={state}
+              direction="horizontal"
+            />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -898,7 +972,7 @@ const TentDetail = () => {
                                             </div>
                                         </div> */}
                                         <div className="price-block mt-5">
-                                            <div className="heading6 text-start">Price Summary</div>
+                                            <div className="heading6 text-start">Price Details</div>
                                             <div className="list mt-2">
                                                 <div className="flex items-center justify-between">
                                                     <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>$200 x 5 Nights</div>
@@ -918,6 +992,7 @@ const TentDetail = () => {
                                                 <div className="heading5">$1100</div>
                                             </div>
                                             <div className="button-main w-full text-center mt-5">Booking Room</div>
+                                            <div className="button-main w-full text-center mt-5 bg-success">Enquire on WhatsApp </div>
                                         </div>
                                     </div>
 

@@ -45,7 +45,7 @@ const HeaderThree = () => {
 
     const [openDate, setOpenDate] = useState(false)
     const [openGuest, setOpenGuest] = useState(false)
-    const [location, setLocation] = useState('namibia')
+    const [location, setLocation] = useState('Dubai ')
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -127,9 +127,9 @@ const HeaderThree = () => {
 
     return (
         <>
-            <div id="header" className='header'>
-                <div className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-between ${fixedHeader ? 'fixed box-shadow' : ''}`}>
-                    <Link href={'/'} className="logo">
+            <div id="header" className='header max-xl:hidden'>
+                <div className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-center ${fixedHeader ? 'fixed box-shadow' : ''}`}>
+                    {/* <Link href={'/'} className="logo">
                          <Image
                                                  src={'/images/allimg/logo/logo.jpg'}
                                                  width={100}
@@ -139,20 +139,21 @@ const HeaderThree = () => {
                                                  className='sm:w-[100px] w-[100px]'
                                                  style={{marginTop:'10px',borderRadius:'0 5px 5px 5px'}}
                                              />
-                    </Link>
-                    <div className="menu-main style-three relative flex items-center justify-center gap-2 max-xl:hidden">
-                        <div className="select-block item flex items-center gap-2 py-2.5 border border-outline rounded-lg">
+                    </Link> */}
+                    <div className="menu-main style-three   bg-white relative flex items-center justify-center gap-0 max-xl:hidden" style={{boxShadow:' rgba(20, 20, 20, 0.32) 0px 6px 16px',borderRadius:'30px'}}>
+                        <div className="select-block item flex items-center gap-2 py-2.5  " style={{borderTopLeftRadius:'30px',borderBottomLeftRadius:'30px'}}>
                             <Icon.MapPin className='icon text-xl left-5' />
                             <input
-                                className='body2 pl-12 pr-5 border-0 max-w-[160px]'
+                                className='body2 pl-12 pr-5 border max-w-[160px]'
                                 type="text"
                                 placeholder='Search'
                                 value={location}
                                 onChange={(e) => setLocation(e.target.value)}
+                                style={{borderRadius:'30px'}}
                             />
                         </div>
-                        <div className="item py-2.5 px-5 border border-outline rounded-lg cursor-pointer">
-                            <div className='flex items-center gap-2' onClick={handleOpenDate}>
+                        <div className="item py-2.5 px-5  border-l  border-separate  cursor-pointer items-center" >
+                            <div className='flex items-center gap-2  ' onClick={handleOpenDate}>
                                 <Icon.MapPin className='text-xl' />
                                 <div className="body2">{state[0].startDate.toLocaleDateString()} - {state[0].endDate.toLocaleDateString()}</div>
                             </div>
@@ -167,7 +168,7 @@ const HeaderThree = () => {
                                 direction="horizontal"
                             />
                         </div>
-                        <div className="item py-2.5 px-5 border border-outline rounded-lg">
+                        <div className="item py-2.5 px-5   border-l  border-separate ">
                             <div className='flex items-center gap-2 cursor-pointer' onClick={handleOpenGuest}>
                                 <Icon.MapPin className='text-xl' />
                                 <div className="body2">
@@ -199,7 +200,7 @@ const HeaderThree = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
+                                <div className="item flex items-center justify-between pb-4 pt-4 border border-outline">
                                     <div className="left">
                                         <p>Children</p>
                                         <div className="caption1 text-variant1">(2-12 Years)</div>
@@ -228,8 +229,10 @@ const HeaderThree = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
-                            <div className="button-main" onClick={handleSearch}>Search</div>
+                        <div className="item" >
+                            <div className="button-main " onClick={handleSearch} style={{borderTopRightRadius:'30px',borderBottomRightRadius:'30px',borderTopLeftRadius:'0',borderBottomLeftRadius:'0'}}>
+                                <span className='fi fi-rr-search'></span>
+                            </div>
                         </div>
                     </div>
                     <div className="right flex items-center gap-3">
@@ -252,7 +255,7 @@ const HeaderThree = () => {
                         <div className="menu-mobile-icon flex items-center cursor-pointer" onClick={() => setOpenMenuMobile(!openMenuMobile)}>
                             <Icon.List className='sm:text-xl text-2xl text-black' weight='bold' />
                         </div> */}
-<div className="menu-main h-full max-lg:hidden">
+{/* <div className="menu-main h-full max-lg:hidden">
                         <ul className='flex items-center xl:gap-[10px] gap-10 h-full'>
                            
 
@@ -289,7 +292,7 @@ const HeaderThree = () => {
                                 </Link>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
 
                     </div>
                 </div>

@@ -44,7 +44,7 @@ const HeaderOne = () => {
                             height={100}
                             alt='logo'
                             priority={true}
-                            className='sm:w-[100px] w-[100px]'
+                            className='sm:w-[100px] w-[100px] '
                             style={{marginTop:'10px',borderRadius:'0 5px 5px 5px'}}
                         />
                     </Link>
