@@ -429,7 +429,7 @@ const TentDetail = () => {
                                 </div>
                                 <div className="list xl:grid grid-cols-2 xl:gap-16 max-xl:flex max-xl:flex-wrap max-xl:gap-8 max-xl:gap-y-2 xl:gap-y-2 mt-4">
                                         <div className="flex items-center gap-4">
-                                        <i className="fi fi-rr-restaurant" style={{ fontSize: '28px',color:'#32548e' }}></i>
+                                        <span className="fi fi-rr-restaurant" style={{ fontSize: '28px',color:'#32548e' }}></span>
                                             <div className="body2">Kitchen</div>
                                         </div>
                                         {/* <div className="flex items-center gap-4">
