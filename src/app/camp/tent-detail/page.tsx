@@ -354,7 +354,7 @@ const TentDetail = () => {
                       {/* Close Button */}
                       <button
                         onClick={closeModal}
-                        className="absolute top-16 right-4 text-[#32548E] text-3xl font-bold  z-50"
+                        className="absolute top-16 right-4 text-white text-3xl font-bold  z-50"
                       >
                         &times;
                       </button>
