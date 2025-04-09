@@ -251,7 +251,15 @@ const DemoBook = () => {
                             <div className="heading5">AED {totalBeforeTaxes}</div>
                         </div>
                         <div className="button-main w-full text-center mt-5">Booking Room</div>
-                        <div className="button-main w-full text-center mt-5 bg-success">Enquire on WhatsApp</div>
+                          <a
+  href="https://wa.me/918197723683"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div className="button-main w-full text-center mt-5 bg-success text-white ">
+    Enquire on WhatsApp
+  </div>
+</a>
                     </div>
                 </div>
             </StickyBox>

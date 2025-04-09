@@ -169,13 +169,35 @@ const TentDetail = () => {
         }
     };
 
+    const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
+    const images = [
+      { src: "/images/allimg/rooms/1.png", alt: "Image 1" },
+      { src: "/images/allimg/rooms/2.png", alt: "Image 2" },
+      { src: "/images/allimg/rooms/3.png", alt: "Image 3" },
+      { src: "/images/allimg/rooms/4.png", alt: "Image 4" },
+      { src: "/images/allimg/rooms/5.png", alt: "Image 5" },
+    ];
+  
+    const handlePrev = () => {
+      if (currentIndex !== null) {
+        setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+      }
+    };
+  
+    const handleNext = () => {
+      if (currentIndex !== null) {
+        setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+      }
+    };
+  
+    const closeModal = () => setCurrentIndex(null);
     return (
         <>
             <div className='ten-detail  lg:ml-10 lg:mr-10' >
                 <HeaderOne />
-                <HeaderThree />
-                <div className="content-detail pt-8 pb-2 lg:ml-8 lg:mr-10">
+                {/* <HeaderThree /> */}
+                <div className="content-detail pt-8 pb-2 lg:ml-[30px] ">
                     <div className="container">
                         <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
                             <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
@@ -191,6 +213,52 @@ const TentDetail = () => {
                             </div>
                             </div>
                             </div>
+
+
+
+
+
+
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+                            
 
 
                             
@@ -226,63 +294,102 @@ const TentDetail = () => {
 
 
 
-<div className="content-detail   pt-2 w-full">
-  <div className="w-full px-4 sm:px-6 lg:px-8">
-    <div className="flex flex-col-reverse lg:flex-row gap-y-10 justify-between w-full">
+<div className="content-detail pt-2 w-full ">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col-reverse lg:flex-row gap-y-10 justify-between w-full">
+          <div className="content w-full lg:pr-[15px]">
+            <div className="flex items-center gap-6 pb-4 w-full">
+              <div className="heading6 w-full">
+                <div
+                  className="grid grid-cols-4 grid-rows-4 gap-2 hidden md:grid w-full"
+                  style={{ height: "380px" }}
+                >
+                  {images.map((image, index) => (
+                    <div
+                      key={index}
+                      className={
+                        index === 0
+                          ? "col-span-2 row-span-4"
+                          : index === 1
+                          ? "row-span-2 col-start-3"
+                          : index === 2
+                          ? "row-span-2 col-start-4"
+                          : index === 3
+                          ? "row-span-2 col-start-3 row-start-3"
+                          : "row-span-2 col-start-4 row-start-3"
+                      }
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        onClick={() => setCurrentIndex(index)}
+                        className="w-full h-full object-cover cursor-pointer"
+                        style={{
+                          borderTopLeftRadius: index === 0 ? "20px" : "",
+                          borderBottomLeftRadius: index === 0 ? "20px" : "",
+                          borderTopRightRadius: index === 2 ? "20px" : "",
+                          borderBottomRightRadius: index === 4 ? "20px" : "",
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
 
-      <div className="content w-full lg:pr-[15px]">
-        <div className="flex items-center gap-6 pb-4 w-full">
-          <div className="heading6 w-full">
-            <div
-              className="grid grid-cols-4 grid-rows-4 gap-2 hidden md:grid w-full"
-              style={{height: '340px' }}
-            >
-              <div className="col-span-2 row-span-4">
-                <img
-                  src="/images/allimg/rooms/1.png"
-                  alt="Image 1"
-                  className="w-full h-full object-cover"
-                  style={{ borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px' }}
-                />
-              </div>
-              <div className="row-span-2 col-start-3">
-                <img
-                  src="/images/allimg/rooms/2.png"
-                  alt="Image 2"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="row-span-2 col-start-4">
-                <img
-                  src="/images/allimg/rooms/3.png"
-                  alt="Image 3"
-                  className="w-full h-full object-cover"
-                  style={{ borderTopRightRadius: '20px' }}
-                />
-              </div>
-              <div className="row-span-2 col-start-3 row-start-3">
-                <img
-                  src="/images/allimg/rooms/4.png"
-                  alt="Image 4"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="row-span-2 col-start-4 row-start-3">
-                <img
-                  src="/images/allimg/rooms/5.png"
-                  alt="Image 5"
-                  className="w-full h-full object-cover"
-                  style={{ borderBottomRightRadius: '20px' }}
-                />
+                {/* Modal */}
+                {currentIndex !== null && (
+                  <div
+                    className="fixed inset-0 bg-transparent bg-opacity-80 z-50 flex justify-center items-center"
+                    onClick={closeModal}
+                  >
+                    <div
+                      className="relative max-w-[90vw] max-h-[90vh] flex justify-center items-center"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <img
+  src={images[currentIndex].src}
+  alt={images[currentIndex].alt}
+  className="max-w-full rounded-xl object-contain"
+  style={{ height: '440px', marginTop: '70px' }} // avoid header overlap
+/>
+                      {/* Close Button */}
+                      <button
+                        onClick={closeModal}
+                        className="absolute top-16 right-4 text-[#32548E] text-3xl font-bold  z-50"
+                      >
+                        &times;
+                      </button>
+
+                      {/* Prev Button */}
+                      <button
+                        onClick={handlePrev}
+                        className="absolute left-2 md:left-6 text-white text-3xl font-bold bg-black bg-opacity-50 px-3 py-1 rounded-full"
+                      >
+                        &#8592;
+                      </button>
+
+                      {/* Next Button */}
+                      <button
+                        onClick={handleNext}
+                        className="absolute right-2 md:right-6 text-white text-3xl font-bold bg-black bg-opacity-50 px-3 py-1 rounded-full"
+                      >
+                        &#8594;
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
-</div>
+
+
+
+
+
+
+
 
 
 
@@ -770,7 +877,9 @@ const TentDetail = () => {
                                                     </div>
                                                     <div className="date mt-1 text-variant2">{item.date}</div>
                                                     <Rate currentRate={item.star} classname='mt-2' />
-                                                    <div className="body2 mt-2">{item.description}</div>
+                                                    <div className="body mt-2">
+  {item.description}
+</div>
                                                   
                                                 </div>
                                             </div>
@@ -1073,7 +1182,7 @@ const TentDetail = () => {
         <div className="relative">
           <iframe
             className="w-full h-[360px] rounded-lg"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352341.87716351956!2d55.22748795!3d25.076022449999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1743760223023!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11000.863358972638!2d55.2741925!3d25.18500985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682def25f457%3A0x3dd4c4097970950e!2sBusiness%20Bay%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1744192045088!5m2!1sen!2sin"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

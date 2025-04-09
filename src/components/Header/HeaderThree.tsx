@@ -127,8 +127,8 @@ const HeaderThree = () => {
 
     return (
         <>
-            <div id="header" className='header max-xl:hidden'>
-                <div className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-center ${fixedHeader ? 'fixed box-shadow' : ''}`}>
+            <div id="header" className='header '>
+                <div className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-center ${fixedHeader ? 'fixed box-shadow' : ''}`} >
                     {/* <Link href={'/'} className="logo">
                          <Image
                                                  src={'/images/allimg/logo/logo.jpg'}

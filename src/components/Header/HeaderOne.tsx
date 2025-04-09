@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import * as Icon from "phosphor-react";
+import HeaderThree from './HeaderThree';
 
 const HeaderOne = () => {
     const pathname = usePathname()
@@ -35,8 +36,21 @@ const HeaderOne = () => {
 
     return (
         <>
-            <div id="header" className='header'>
-                <div className={`header-main h-20 w-full bg-white px-4 min-[1322px]:px-10 flex items-center justify-between`}>
+           
+
+
+
+
+
+<div className="content-detail border-t border-outline pt-2">
+                    <div className="container">
+                        <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
+                            <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
+
+
+{/* this call old */}
+                            <div  id="header" className='header '>
+                <div className={`header-main h-20 w-full bg-white px-4 min-[1322px]:px-10 flex items-center justify-between ` }>
                     <Link href={'#'} className="logo">
                         <Image
                             src={'/images/allimg/logo/logo.jpg'}
@@ -45,9 +59,10 @@ const HeaderOne = () => {
                             alt='logo'
                             priority={true}
                             className='sm:w-[100px] w-[100px] '
-                            style={{borderRadius:'0 5px 5px 5px'}}
+                            style={{marginBottom:'30px'}}
                         />
                     </Link>
+                    <HeaderThree/>
                     <div className="menu-main h-full max-lg:hidden">
                         <ul className='flex items-end xl:gap-[20px] gap-10 h-full'>
                             {/* <li className='h-full relative'>
@@ -249,6 +264,22 @@ const HeaderOne = () => {
                     </div>
                 </div>
             </div>
+            {/* this call old */}
+
+                               
+                                
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+
+
+
+
 
             <div id="menu-mobile" className={`${openMenuMobile ? 'open' : ''}`}>
                 <div className="menu-container bg-white h-full">
