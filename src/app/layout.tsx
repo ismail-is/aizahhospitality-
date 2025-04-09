@@ -8,7 +8,7 @@ const jost = Jost({ subsets: ['latin'] })
 const dmsans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title:'Aizah Hospitality',
+  title: 'Aizah Hospitality',
   description: 'Aizah Hospitality',
 }
 
@@ -20,6 +20,13 @@ export default function RootLayout({
   return (
     <WishlistProvider>
       <html lang="en">
+        <head>
+          {/* ✅ Flaticon CSS CDN */}
+          <link
+            rel="stylesheet"
+            href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+          />
+        </head>
         <body className={jost.className}>{children}</body>
       </html>
     </WishlistProvider>
