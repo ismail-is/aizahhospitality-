@@ -337,46 +337,59 @@ const TentDetail = () => {
 
                 {/* Modal */}
                 {currentIndex !== null && (
-                  <div
-                    className="fixed inset-0 bg-transparent bg-opacity-80 z-50 flex justify-center items-center"
-                    onClick={closeModal}
-                  >
-                    <div
-                      className="relative max-w-[90vw] max-h-[90vh] flex justify-center items-center"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <img
-  src={images[currentIndex].src}
-  alt={images[currentIndex].alt}
-  className="max-w-full rounded-xl object-contain"
-  style={{ height: '440px', marginTop: '70px' }} // avoid header overlap
-/>
-                      {/* Close Button */}
-                      <button
-                        onClick={closeModal}
-                        className="absolute top-16 right-4 text-white text-3xl font-bold  z-50"
-                      >
-                        &times;
-                      </button>
+  <div
+    className="fixed inset-0 bg-transparent bg-opacity-80 z-50 flex justify-center items-center px-4"
+    onClick={closeModal}
+  >
+    <div
+      className="relative flex flex-col items-center"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {/* Image */}
+      <img
+        src={images[currentIndex].src}
+        alt={images[currentIndex].alt}
+        className="rounded-xl object-cover"
+        style={{
+          width: '100%',
+          maxWidth: '400px',
+          height: '400px',
+        }}
+      />
 
-                      {/* Prev Button */}
-                      <button
-                        onClick={handlePrev}
-                        className="absolute left-2 md:left-6 text-white text-3xl font-bold bg-black bg-opacity-50 px-3 py-1 rounded-full"
-                      >
-                        &#8592;
-                      </button>
+      {/* Prev/Next Buttons under the image */}
+      <div className="flex justify-between items-center w-full max-w-[400px] mt-4 px-4">
+        <button
+          onClick={handlePrev}
+          className="text-white text-lg font-bold bg-black bg-opacity-60 px-4 py-2 rounded-lg"
+          style={{marginTop:'-150px'}}
+        >
+          &#8592; 
+        </button>
+        <button
+          onClick={handleNext}
+          className="text-white text-lg font-bold bg-black bg-opacity-60 px-4 py-2 rounded-lg"
+          style={{marginTop:'-150px'}}
+        >
+           &#8594;
+        </button>
+      </div>
 
-                      {/* Next Button */}
-                      <button
-                        onClick={handleNext}
-                        className="absolute right-2 md:right-6 text-white text-3xl font-bold bg-black bg-opacity-50 px-3 py-1 rounded-full"
-                      >
-                        &#8594;
-                      </button>
-                    </div>
-                  </div>
-                )}
+      {/* Close Button */}
+      <button
+        onClick={closeModal}
+        className="absolute top-4 right-4 text-white text-3xl font-bold z-50"
+      >
+        &times;
+      </button>
+    </div>
+  </div>
+)}
+
+
+
+
+
               </div>
             </div>
           </div>
@@ -398,19 +411,23 @@ const TentDetail = () => {
 
 
 
-{/* Mobile Slider */}
+{/* Mobile screen */}
 <div className="md:hidden flex overflow-x-auto gap-4 px-2">
-  {["1.png", "2.png", "3.png", "4.png", "5.png"].map((img, index) => (
-    <div key={index} className="min-w-[100%] max-w-[100%] flex-shrink-0">
+  {images.map((image, index) => (
+    <div
+      key={index}
+      className="min-w-[100%] max-w-[100%] flex-shrink-0"
+      onClick={() => setCurrentIndex(index)} // ← this line triggers modal
+    >
       <img
-        src={`/images/allimg/rooms/${img}`}
-        alt={`Room ${index + 1}`}
-        className="w-full h-60 object-cover rounded-lg"
+        src={image.src}
+        alt={image.alt}
+        className="w-full h-60 object-cover rounded-lg cursor-pointer"
       />
     </div>
   ))}
 </div>
-
+{/* Mobile screen */}
 
 
 
@@ -611,45 +628,51 @@ const TentDetail = () => {
                                     </div>
                                   
                                 </div>
-                                <div className="list xl:grid grid-cols-2 xl:gap-16 max-xl:flex max-xl:flex-wrap max-xl:gap-8 max-xl:gap-y-2 xl:gap-y-2 mt-4">
-                                        <div className="flex items-center gap-4">
-                                        <span className="fi fi-rr-restaurant" style={{ fontSize: '28px',color:'#32548e' }}></span>
-                                            <div className="body2">Kitchen</div>
-                                        </div>
-                                        {/* <div className="flex items-center gap-4">
-                                        <i className="fi fi-rr-desk" style={{ fontSize: '28px',color:'black' }}></i>
-                                            <div className="body2">Dedicated workspace</div>
-                                        </div> */}
-                                        <div className="flex items-center gap-4">
-                                        <span className="fi fi-rr-swimmer" style={{ fontSize: '28px',color:'#32548e' }}></span>
-                                            <div className="body2">Pool</div>
-                                        </div>
-                                      
-                                        <div className="flex items-center gap-4">
-                                        <i className="fi fi-rr-wifi" style={{ fontSize: '28px',color:'#32548e' }}></i>
-                                            <div className="body2">Wifi</div>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                        <i className="fi fi-rr-parking-circle" style={{ fontSize: '28px',color:'#32548e' }}></i>
-                                            <div className="body2"> parking </div>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                        <i className="fi fi-rr-computer" style={{ fontSize: '28px',color:'#32548e' }}></i>
-                                            <div className="body2">TV</div>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                        <i className="fi fi-rr-air-conditioner"  style={{ fontSize: '28px',color:'#32548e' }}></i>
-                                            <div className="body2">Air conditioning</div>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                        <i className=" fi fi-rr-doctor" style={{ fontSize: '28px',color:'#32548e' }}></i>
-                                            <div className="body2">First aid kit</div>
-                                        </div>
-                                        {/* <div className="flex items-center gap-2">
-                                        <img src='/images/allimg/icons/kitchen.png'  />
-                                            <div className="body2">Exterior security cameras on property</div>
-                                        </div> */}
-                                    </div>
+                                <div className="list grid grid-cols-2 gap-4 mt-4">
+  {/* Kitchen */}
+  <div className="flex items-center gap-3">
+    <span className="fi fi-rr-restaurant text-[24px] text-[#32548e]"></span>
+    <div className="body2">Kitchen</div>
+  </div>
+
+  {/* Pool */}
+  <div className="flex items-center gap-3">
+    <span className="fi fi-rr-swimmer text-[24px] text-[#32548e]"></span>
+    <div className="body2">Pool</div>
+  </div>
+
+  {/* Wifi */}
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-wifi text-[24px] text-[#32548e]"></i>
+    <div className="body2">Wifi</div>
+  </div>
+
+  {/* Parking */}
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-parking-circle text-[24px] text-[#32548e]"></i>
+    <div className="body2">Parking</div>
+  </div>
+
+  {/* TV */}
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-computer text-[24px] text-[#32548e]"></i>
+    <div className="body2">TV</div>
+  </div>
+
+  {/* AC */}
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-air-conditioner text-[24px] text-[#32548e]"></i>
+    <div className="body2">Air conditioning</div>
+  </div>
+
+  {/* First Aid */}
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-doctor text-[24px] text-[#32548e]"></i>
+    <div className="body2">First aid kit</div>
+  </div>
+</div>
+
+
                                 
                             </div>
                             </div>
@@ -860,16 +883,17 @@ const TentDetail = () => {
                                   <div className="list-review lg:pt-4 pt-2">
   {testimonialData.slice(0, 2).map((item, index) => (
    <div key={index} className="item flex flex-col sm:flex-row gap-5 md:mt-6 mt-4 w-full">
-   <div className="avatar w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
-     <Image
-       src={item.avatar}
-       width={400}
-       height={400}
-       alt={item.name}
-       priority={true}
-       className="w-full h-full object-cover"
-     />
-   </div>
+  <div className="avatar w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
+  <Image
+    src={item.avatar}
+    width={400}
+    height={400}
+    alt={item.name}
+    priority={true}
+    className="w-full h-full object-cover"
+  />
+</div>
+
    <div className="review pb-6 border-b border-outline w-full">
      <div className="flex items-center gap-2">
        <div className="heading5">{item.name}</div>
