@@ -857,34 +857,38 @@ const TentDetail = () => {
                                         <div className="heading5">Guest reviews</div>
                                         <Link href={'#form-review'} className='text-button-sm px-5 py-2 rounded-lg border duration-300 hover:bg-[#f6dd49] hover:text-white hover:border-white bg-[#32548e] text-white'>Add Reviews</Link>
                                     </div>
-                                    <div className="list-review lg:pt-4 pt-2">
-                                        {testimonialData.slice(0, 2).map((item, index) => (
-                                            <div key={index} className="item flex gap-5 md:mt-6 mt-4">
-                                                <div className="avatar w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0">
-                                                    <Image
-                                                        src={item.avatar}
-                                                        width={400}
-                                                        height={400}
-                                                        alt={item.name}
-                                                        priority={true}
-                                                        className='w-full h-full object-cover'
-                                                    />
-                                                </div>
-                                                <div className='review pb-6 border-b border-outline'>
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="heading5">{item.name}</div>
-                                                        <Icon.CheckCircle weight='fill' className='text-success' />
-                                                    </div>
-                                                    <div className="date mt-1 text-variant2">{item.date}</div>
-                                                    <Rate currentRate={item.star} classname='mt-2' />
-                                                    <div className="body mt-2">
-  {item.description}
+                                  <div className="list-review lg:pt-4 pt-2">
+  {testimonialData.slice(0, 2).map((item, index) => (
+   <div key={index} className="item flex flex-col sm:flex-row gap-5 md:mt-6 mt-4 w-full">
+   <div className="avatar w-[60px] h-[60px] rounded-full overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
+     <Image
+       src={item.avatar}
+       width={400}
+       height={400}
+       alt={item.name}
+       priority={true}
+       className="w-full h-full object-cover"
+     />
+   </div>
+   <div className="review pb-6 border-b border-outline w-full">
+     <div className="flex items-center gap-2">
+       <div className="heading5">{item.name}</div>
+       <Icon.CheckCircle weight="fill" className="text-success" />
+     </div>
+     <div className="date mt-1 text-variant2">{item.date}</div>
+     <Rate currentRate={item.star} classname="mt-2" />
+     <div
+       className="body mt-2"
+       style={{ textAlign: "justify", textJustify: "inter-word" }}
+     >
+       {item.description}
+     </div>
+   </div>
+ </div>
+ 
+  ))}
 </div>
-                                                  
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
+
                                    
                                 </div>
                                
