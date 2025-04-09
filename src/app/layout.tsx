@@ -19,6 +19,10 @@ export default function RootLayout({
   return (
     <WishlistProvider>
       <html lang="en">
+      <link
+    rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+  />
         <body className={jost.className}>{children}</body>
       </html>
     </WishlistProvider>
