@@ -37,7 +37,7 @@ const HeaderOne = () => {
         <>
             <div id="header" className='header'>
                 <div className={`header-main h-20 w-full bg-white px-4 min-[1322px]:px-10 flex items-center justify-between`}>
-                    <Link href={'/'} className="logo">
+                    <Link href={'#'} className="logo">
                         <Image
                             src={'/images/allimg/logo/logo.jpg'}
                             width={100}

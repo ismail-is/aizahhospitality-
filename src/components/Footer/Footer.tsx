@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="bg-[#ddce74] lg:pt-15 md:pt-12 pt-8 " style={{borderTopLeftRadius:'30px',borderTopRightRadius:'30px'}}>
                     <div className="container">
                         <div className="footer-heading flex items-center justify-center flex-wrap gap-6 pb-[30px] border-b border-outline">
-                            <Link href={'/'}>
+                            <Link href={'#'}>
                                  <Image
                                                             src={'/images/allimg/logo/logo.jpg'}
                                                             width={100}
