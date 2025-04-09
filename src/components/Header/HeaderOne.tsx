@@ -274,7 +274,7 @@ const HeaderOne = () => {
                             </div>
                             <div className="list-nav mt-6">
                                 <ul>
-                                    <li
+                                    {/* <li
                                         className={`${openSubNavMobile === 1 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(1)}
                                     >
@@ -454,6 +454,39 @@ const HeaderOne = () => {
                                                             Review
                                                         </Link>
                                                     </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li> */}
+                                    <li
+                                        className={`${openSubNavMobile === 5 ? 'open' : ''}`}
+                                        onClick={() => handleOpenSubNavMobile(5)}
+                                    >
+                                        <div >
+                                         
+                                            <div className="list-nav-item w-full pt-2 pb-6">
+                                                <ul className='w-full'>
+                                                    <li>
+                                                        <Link href="#" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                            home
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="#" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                          About us
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/tent-detail" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                           Room
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="#" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                        Contact
+                                                        </Link>
+                                                    </li>
+                                                   
                                                 </ul>
                                             </div>
                                         </div>
