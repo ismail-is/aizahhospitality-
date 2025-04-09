@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Jost } from 'next/font/google'
 import '@/styles/styles.scss'
+import '@/styles/flaticon.css';
 import { WishlistProvider } from '@/context/WishlistContext'
 
-const jost = Jost({ subsets: ['latin'], variable: '--font-jost' })
-const dmsans = DM_Sans({ subsets: ['latin'], variable: '--font-dmsans' })
+const jost = Jost({ subsets: ['latin'] })
+const dmsans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'GlampHub',
-  description: 'Listing Glamping Template',
+  title:'Aizah Hospitality',
+  description: 'Aizah Hospitality',
 }
 
 export default function RootLayout({
@@ -17,17 +18,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${jost.variable} ${dmsans.variable}`}>
-      <head>
-        {/* ✅ FlatIcons CDN - Correctly placed */}
-        <link
-          rel="stylesheet"
-          href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
-        />
-      </head>
-      <body className={jost.className}>
-        <WishlistProvider>{children}</WishlistProvider>
-      </body>
-    </html>
+    <WishlistProvider>
+      <html lang="en">
+        <body className={jost.className}>{children}</body>
+      </html>
+    </WishlistProvider>
   )
 }
