@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Jost } from 'next/font/google'
 import '@/styles/styles.scss'
-import '@/styles/flaticon.css';
+
 import { WishlistProvider } from '@/context/WishlistContext'
 
 const jost = Jost({ subsets: ['latin'] })
