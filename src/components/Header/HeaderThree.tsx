@@ -231,7 +231,7 @@ const HeaderThree = () => {
                         </div>
                         <div className="item" >
                             <div className="button-main " onClick={handleSearch} style={{borderTopRightRadius:'30px',borderBottomRightRadius:'30px',borderTopLeftRadius:'0',borderBottomLeftRadius:'0'}}>
-                                <span >Search </span>
+                                <span className="fi fi-rr-search"> </span>
                             </div>
                         </div>
                     </div>
