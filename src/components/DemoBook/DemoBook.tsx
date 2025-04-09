@@ -123,18 +123,27 @@ const DemoBook = () => {
                                         <Icon.CalendarBlank className='text-xl' />
                                         <div className="text-button" style={{fontSize: '12px', fontWeight: 'bolder'}}>Check In</div>
                                     </div>
-                                    <div className="body2 mt-1" style={{fontSize: '12px', fontWeight: 'bolder'}}>
-                                        {state[0].startDate.toLocaleDateString()}
-                                    </div>
+                                    <div className="body2 mt-1" style={{ fontSize: '12px', fontWeight: 'bolder' }}>
+  {state[0].startDate.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: '2-digit',
+  })}
+</div>
                                 </div>
                                 <div className="left pr-5 py-4">
                                     <div className="flex items-center justify-end gap-1">
                                         <Icon.CalendarBlank className='text-xl' />
                                         <div className="text-button" style={{fontSize: '12px', fontWeight: 'bolder'}}>Check Out</div>
                                     </div>
-                                    <div className="body2 mt-1 text-end" style={{fontSize: '12px', fontWeight: 'bolder'}}>
-                                        {state[0].endDate.toLocaleDateString()}
-                                    </div>
+                                    <div className="body2 mt-1 text-end" style={{ fontSize: '12px', fontWeight: 'bolder' }}>
+  {state[0].endDate.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: '2-digit',
+  })}
+</div>
+
                                 </div>
                             </div>
                             {openDate && (
