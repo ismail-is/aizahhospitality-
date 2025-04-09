@@ -263,12 +263,13 @@ const HeaderOne = () => {
                                 </div>
                                 <Link href={'/'} className='logo text-center'>
                                     <Image
-                                        src={'/images/logo.png'}
-                                        width={3000}
-                                        height={2000}
+                                        src={'/images/allimg/logo/logo.jpg'}
+                                        width={100}
+                                        height={100}
                                         alt='logo'
                                         priority={true}
-                                        className='md:w-[220px] w-[180px]'
+                                        className='sm:w-[100px] w-[100px] '
+                                        style={{borderRadius:'0 5px 5px 5px'}}
                                     />
                                 </Link>
                             </div>
@@ -477,7 +478,7 @@ const HeaderOne = () => {
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/tent-detail" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                        <Link href="/camp/tent-detail" className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                            Room
                                                         </Link>
                                                     </li>
