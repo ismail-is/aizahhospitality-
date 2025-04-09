@@ -361,8 +361,7 @@ const TentDetail = () => {
                                          }}
                                          aria-hidden="true">
                                          ·
-                                         </span>
-1 Bedroom                                <span
+                                         </span>1 Bedroom<span
                                          style={{
                                          fontSize: '14px',
                                          marginLeft: '4px',
