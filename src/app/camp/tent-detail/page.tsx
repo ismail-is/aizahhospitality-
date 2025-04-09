@@ -24,6 +24,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import Rate from '@/components/Other/Rate'
 import StickyBox from 'react-sticky-box';
 import HeaderThree from '@/components/Header/HeaderThree'
+import DemoBook from '@/components/DemoBook/DemoBook'
 
 interface GuestType {
     adult: number;
@@ -331,6 +332,7 @@ const TentDetail = () => {
                         ))}
                     </Slider> */}
                 </div>
+                
                 <div className="content-detail lg:py-8 md:py-14 py-10">
                     <div className="container">
                         <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
@@ -653,7 +655,7 @@ const TentDetail = () => {
           
           <div className="heading6">Dates & Availability</div>
 
-          <div className="bg-img relative w-full mt-1">
+          <div className="bg-img relative w-full mt-1 z-0">
             <DateRangePicker
               className="form-date-picker style-detail w-full border border-outline rounded-none open"
               onChange={item => setState([item.selection] as any)}
@@ -815,8 +817,8 @@ const TentDetail = () => {
                             </div>
 
 
-                            
-                            <div className="sidebar xl:w-1/3 lg:w-[40%] lg:pl-[45px] w-full">
+                            <DemoBook/>
+                            {/* <div className="sidebar xl:w-1/3 lg:w-[40%] lg:pl-[45px] w-full">
                                 <StickyBox offsetTop={100} offsetBottom={20} >
                                     <div className="reservation bg-surface p-6 rounded-md"  style={{boxShadow:' rgba(20, 20, 20, 0.32) 0px 6px 16px',border:'1px solid rgb(221, 221, 221)',borderRadius:'20px'}}>
                                         <div className="heading6 text-start">Add dates for prices</div>
@@ -824,7 +826,6 @@ const TentDetail = () => {
                                             <div className="relative cursor-pointer">
                                                 <div className="grid grid-cols-2 border-b border-separate" onClick={handleOpenDate}>
                                                     <div className="left pl-5 py-4 border-r border-separate">
-                                                    {/* <div className="left pl-5 py-4 border-r border-outline"> */}
                                                         <div className="flex items-center gap-1">
                                                             <Icon.CalendarBlank className='text-xl' />
                                                             <div className="text-button " style={{fontSize:'12px',fontWeight:'bolder'}}>Check In</div>
@@ -902,7 +903,7 @@ const TentDetail = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {/* <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
+                                                    <div className="item flex items-center justify-between pb-4 pt-4 border-b border-outline">
                                                         <div className="left">
                                                             <p>Infants</p>
                                                             <div className="caption1 text-variant1">(0-2 Years)</div>
@@ -922,7 +923,7 @@ const TentDetail = () => {
                                                                 <Icon.Plus weight='bold' />
                                                             </div>
                                                         </div>
-                                                    </div> */}
+                                                    </div>
                                                     <div className="item flex items-center justify-between pb-4 pt-4">
                                                         <div className="left">
                                                             <p className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>Pets</p>
@@ -952,7 +953,7 @@ const TentDetail = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* <div className="services bg-white px-5 py-4 mt-5 border border-outline">
+                                        <div className="services bg-white px-5 py-4 mt-5 border border-outline">
                                             <div className="text-button">Add Services</div>
                                             <div className="list flex flex-col gap-2 mt-3">
                                                 {tentMain.services.map((item, index) => (
@@ -970,22 +971,22 @@ const TentDetail = () => {
                                                     </div>
                                                 ))}
                                             </div>
-                                        </div> */}
+                                        </div>
                                         <div className="price-block mt-5">
                                             <div className="heading6 text-start">Price Details</div>
                                             <div className="list mt-2">
                                                 <div className="flex items-center justify-between">
-                                                    <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>$200 x 5 Nights</div>
+                                                    <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}> AED 200x 5 Nights</div>
                                                     <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>05 x $200</div>
                                                 </div>
-                                                {/* <div className="flex items-center justify-between mt-1">
+                                                <div className="flex items-center justify-between mt-1">
                                                     <div className="text-button" style={{fontSize:'12px',fontWeight:'bolder'}}>Cleaning Fee</div>
                                                     <div className="text-button">$40</div>
                                                 </div>
                                                 <div className="flex items-center justify-between mt-1">
                                                     <div>Services Fee</div>
                                                     <div className="text-button">$60</div>
-                                                </div> */}
+                                                </div>
                                             </div>
                                             <div className="total-block mt-5 pt-5 border-t border-outline flex items-center justify-between">
                                                 <div className="heading6">Total Before Taxes</div>
@@ -996,7 +997,7 @@ const TentDetail = () => {
                                         </div>
                                     </div>
 
-                                    {/* <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
+                                    <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
                                         <div className="bg-img relative">
                                             <iframe
                                                 className='w-full lg:h-[200px] sm:h-[350px] h-[300px]'
@@ -1012,9 +1013,9 @@ const TentDetail = () => {
                                             <Icon.Envelope className='text-variant1' />
                                             <span>hi.avitex@gmail.com</span>
                                         </div>
-                                    </div> */}
+                                    </div>
 
-                                    {/* <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
+                                    <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
                                         <div className="heading6 mt-5">Property Hightlishts</div>
                                         <div className="text-title mt-4">Breakfast Info</div>
                                         <div className="text-variant1 mt-1">Continental, Breakfast to go</div>
@@ -1033,9 +1034,9 @@ const TentDetail = () => {
                                                 <div>Currency exchange</div>
                                             </div>
                                         </div>
-                                    </div> */}
+                                    </div>
 
-                                    {/* <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
+                                    <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
                                         <div className="heading6 mt-5">Why Book With Us?</div>
                                         <div className="list mt-4">
                                             <div className="flex items-center gap-2">
@@ -1055,11 +1056,11 @@ const TentDetail = () => {
                                                 <div>Available Support 24/7</div>
                                             </div>
                                         </div>
-                                    </div> */}
+                                    </div>
 
 
                                 </StickyBox>
-                            </div>
+                            </div> */}
 
                             
                         </div>
@@ -1088,6 +1089,7 @@ const TentDetail = () => {
                     </div>
                 </div>
                 <Footer />
+                {/* <DemoBook/> */}
             </div>
         </>
     )

@@ -11,7 +11,7 @@ const Footer = () => {
             <div id="footer" className='footer ' >
                 <div className="bg-[#ddce74] lg:pt-15 md:pt-12 pt-8 " style={{borderTopLeftRadius:'30px',borderTopRightRadius:'30px'}}>
                     <div className="container">
-                        <div className="footer-heading flex items-center justify-between flex-wrap gap-6 pb-[30px] border-b border-outline">
+                        <div className="footer-heading flex items-center justify-center flex-wrap gap-6 pb-[30px] border-b border-outline">
                             <Link href={'/'}>
                                  <Image
                                                             src={'/images/allimg/logo/logo.jpg'}
@@ -23,7 +23,7 @@ const Footer = () => {
                                                             style={{marginTop:'10px',borderRadius:'10px'}}
                                                         />
                             </Link>
-                            <div className="flex items-center flex-wrap gap-4">
+                            {/* <div className="flex items-center flex-wrap gap-4">
                                 <div className="text-button-sm">Follow Us:</div>
                                 <div className="list-social flex items-center flex-wrap gap-3">
                                     <Link href={'https://www.facebook.com/'} target='_blank'
@@ -57,7 +57,7 @@ const Footer = () => {
                                         <span className='icon-youtube text-sm'></span>
                                     </Link>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="footer-main flex justify-between flex-wrap gap-y-8 lg:py-10 md:py-8 py-6">
                             <div className="company-infor lg:w-1/4 sm:w-1/2">

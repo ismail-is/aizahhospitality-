@@ -36,7 +36,7 @@ const HeaderOne = () => {
     return (
         <>
             <div id="header" className='header'>
-                <div className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-between ${fixedHeader ? 'fixed box-shadow' : ''}`}>
+                <div className={`header-main h-20 w-full bg-white px-4 min-[1322px]:px-10 flex items-center justify-between`}>
                     <Link href={'/'} className="logo">
                         <Image
                             src={'/images/allimg/logo/logo.jpg'}
@@ -45,11 +45,11 @@ const HeaderOne = () => {
                             alt='logo'
                             priority={true}
                             className='sm:w-[100px] w-[100px] '
-                            style={{marginTop:'10px',borderRadius:'0 5px 5px 5px'}}
+                            style={{borderRadius:'0 5px 5px 5px'}}
                         />
                     </Link>
                     <div className="menu-main h-full max-lg:hidden">
-                        <ul className='flex items-center xl:gap-[50px] gap-10 h-full'>
+                        <ul className='flex items-end xl:gap-[20px] gap-10 h-full'>
                             {/* <li className='h-full relative'>
                                 <Link
                                     href="#!"
@@ -196,7 +196,7 @@ const HeaderOne = () => {
                             <li className='h-full relative'>
                                 <Link
                                     href="#"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
                                 >
                                     Home
                                 </Link>
@@ -204,7 +204,7 @@ const HeaderOne = () => {
                             <li className='h-full relative'>
                                 <Link
                                     href="#"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
                                 >
                                     About us
                                 </Link>
@@ -212,7 +212,7 @@ const HeaderOne = () => {
                             <li className='h-full relative'>
                                 <Link
                                     href="/camp/tent-detail"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
                                 >
                                    Room
                                 </Link>
@@ -220,14 +220,14 @@ const HeaderOne = () => {
                             <li className='h-full relative'>
                                 <Link
                                     href="#"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
                                 >
                                     Contact
                                 </Link>
                             </li>
                         </ul>
                     </div>
-                    <div className="right flex items-center gap-3">
+                    <div className="right flex items-center gap-3  lg:hidden"  >
                         {/* <div className="weather flex items-center gap-1 max-sm:hidden">
                             <Icon.CloudSun className='text-xl' />
                             <div className="text-button">18°C</div>
@@ -243,7 +243,7 @@ const HeaderOne = () => {
                             </select>
                             <Icon.CaretDown className='icon text-base right-0' />
                         </div> */}
-                        <div className="menu-mobile-icon lg:hidden flex items-center ml-4" onClick={() => setOpenMenuMobile(true)}>
+                        <div className="menu-mobile-icon lg:hidden  flex items-center ml-4" onClick={() => setOpenMenuMobile(true)}>
                             <Icon.List className='sm:text-xl text-2xl text-black' weight='bold' />
                         </div>
                     </div>
