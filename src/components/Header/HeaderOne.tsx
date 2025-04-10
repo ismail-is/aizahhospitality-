@@ -54,8 +54,8 @@ const HeaderOne = () => {
                     <Link href={'#'} className="logo">
                         <Image
                             src={'/images/allimg/logo/logo.jpg'}
-                            width={100}
-                            height={100}
+                            width={200}
+                            height={200}
                             alt='logo'
                             priority={true}
                             className='sm:w-[100px] w-[100px] '
