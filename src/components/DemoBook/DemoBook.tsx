@@ -265,7 +265,7 @@ const DemoBook = () => {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <div className="button-main w-full text-center mt-5 bg-success text-white ">
+  <div className="button-main w-full text-center mt-5 bg-[#DDCE74] hover:bg-success  text-white ">
     Enquire on WhatsApp
   </div>
 </a>
