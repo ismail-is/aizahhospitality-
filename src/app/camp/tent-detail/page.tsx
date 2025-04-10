@@ -537,7 +537,10 @@ const TentDetail = () => {
                                 <div className="flex items-center  gap-6 pb-4">
                                     <div className="heading6">
                                     <div className="heading6">Description</div>
-                                    <div className="body2 text-variant mt-3" >Enjoy a stylish experience at this centrally located place with a peaceful and luxurious skyscraper view. Particularly fits for both family and party vibe people. You will thank us later for the area and location for sure. If u really want the feel of luxurious space and walking distance to metro station , please don’t miss this place.</div>
+                                    <div className="body2 text-variant mt-3" >Experience refined comfort in this centrally located space, offering a peaceful and luxurious view from a modern skyscraper. Ideal for both families and those seeking a vibrant social setting, the property stands out for its exceptional location and surroundings.</div>
+                                    <div className="body2 text-variant mt-3 border-t border-outline "  >With a spacious layout, upscale ambiance, and convenient walking distance to the metro station, this residence perfectly blends luxury and accessibility. 
+                                    </div>
+                                    <div className="body2 text-variant mt-3 border-t border-outline "  >You’ll truly appreciate the area—an excellent choice you won’t regret.</div>
                                     </div>
                                   
                                 </div>
@@ -669,6 +672,10 @@ const TentDetail = () => {
   <div className="flex items-center gap-3">
     <i className="fi fi-rr-doctor text-[24px] text-[#32548e]"></i>
     <div className="body2">First aid kit</div>
+  </div>
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-house-laptop text-[24px] text-[#32548e]"></i>
+    <div className="body2">Dedicated workspace</div>
   </div>
 </div>
 
