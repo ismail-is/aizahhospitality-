@@ -259,7 +259,7 @@ const DemoBook = () => {
                             <div className="heading6">Total  Price </div>
                             <div className="heading5">AED {totalBeforeTaxes}</div>
                         </div>
-                        <div className="button-main w-full text-center mt-5">Booking Room</div>
+                        <div className="button-main w-full text-center mt-5">Book Now</div>
                           <a
   href="https://wa.me/918197723683"
   target="_blank"
