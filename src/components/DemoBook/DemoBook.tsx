@@ -8,6 +8,7 @@ import { useSearchParams } from 'next/navigation';
 import testimonialData from '@/data/Testimonial.json';
 import { TentType } from '@/type/TentType';
 import * as Icon from 'phosphor-react'
+import Link from 'next/link';
 
 interface GuestType {
     adult: number;
@@ -259,7 +260,7 @@ const DemoBook = () => {
                             <div className="heading6">Total  Price </div>
                             <div className="heading5">AED {totalBeforeTaxes}</div>
                         </div>
-                        <div className="button-main w-full text-center mt-5">Book Now</div>
+                        <div className="button-main w-full text-center mt-5"> <Link href='/checkout'>Book Now</Link></div>
                           <a
   href="https://wa.me/918197723683"
   target="_blank"
