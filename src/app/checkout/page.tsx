@@ -79,10 +79,11 @@ const Checkout = () => {
   return (
     <>
       <HeaderOne />
-      <div className="max-w-10xl mx-auto px-4 py-10 flex flex-col items-center lg:items-start lg:flex-row gap-8 lg:ml-10 lg:mr-10">
+      <div>
+      <div className="max-w-12xl mx-auto px-4 py-10 flex flex-col items-center lg:items-start lg:flex-row gap-8 lg:ml-10 lg:mr-10">
         {/* Left Section */}
         <div
-          className="flex-1 bg-white shadow-md p-6 rounded-2xl"
+          className=" w-full flex-1 bg-white shadow-md p-6 rounded-2xl"
           style={{
             boxShadow: 'rgba(10, 10, 10, 0.22) 0px 3px 9px',
             border: '1px solid rgb(221, 221, 221)',
@@ -266,6 +267,7 @@ const Checkout = () => {
             <span>{totalPrice}</span>
           </div>
         </div>
+      </div>
       </div>
 
       <Footer />
