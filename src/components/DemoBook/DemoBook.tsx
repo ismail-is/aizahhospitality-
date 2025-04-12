@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback, useEffect } from 'react';
 import { DateRangePicker } from 'react-date-range';
 import { addDays, differenceInDays } from 'date-fns';
@@ -9,6 +10,7 @@ import testimonialData from '@/data/Testimonial.json';
 import { TentType } from '@/type/TentType';
 import * as Icon from 'phosphor-react'
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface GuestType {
     adult: number;
@@ -18,21 +20,23 @@ interface GuestType {
 }
 
 const DemoBook = () => {
+    const router = useRouter();
+    
     const params = useSearchParams();
     let tentId = params.get('id');
-    const [openDate, setOpenDate] = useState(false);
-    const [openGuest, setOpenGuest] = useState(false);
-    const [state, setState] = useState([
-        {
-            startDate: new Date(),
-            endDate: addDays(new Date(), 1), // Default to 1 night stay
-            key: 'selection'
-        }
-    ]);
-
-    if (tentId === null || undefined) {
-        tentId = '1';
+     const [openDate, setOpenDate] = useState(false);
+  const [openGuest, setOpenGuest] = useState(false);
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 1), // Default to 1 night stay
+      key: 'selection'
     }
+  ]);
+
+//   let tentId = props.tentId || '1'; // Safe fallback if tentId is null or undefined
+
+  console.log("Selected Date Range:", state);
 
     const tentMain = testimonialData.find(tent => tent.id === tentId);
     const [guest, setGuest] = useState<GuestType>({
@@ -44,7 +48,7 @@ const DemoBook = () => {
 
     // Calculate number of nights and total price
     const nights = differenceInDays(state[0].endDate, state[0].startDate);
-    const nightlyRate = 200; // AED 200 per night
+    const nightlyRate = 2; // AED 200 per night
     const totalBeforeTaxes = nights * nightlyRate;
 
     const handleOpenDate = () => {
@@ -104,6 +108,21 @@ const DemoBook = () => {
         }
     };
 
+
+    const handleBookNow = () => {
+        const startDate = state[0].startDate.toISOString();
+        const endDate = state[0].endDate.toISOString();
+        const guests = guest.adult ;
+        const children = guest.children;
+        const price = nightlyRate;
+        const totalPrice = nights * nightlyRate;
+      
+        router.push(
+          `/checkout?startDate=${startDate}&endDate=${endDate}&guests=${guests}&children=${children}&price=${price}&totalPrice=${totalPrice}`
+        );
+      };
+      
+      
     return (
         <div className="sidebar xl:w-1/3 lg:w-[40%] lg:pl-[45px] w-full">
             <StickyBox offsetTop={100} offsetBottom={20}>
@@ -260,7 +279,7 @@ const DemoBook = () => {
                             <div className="heading6">Total  Price </div>
                             <div className="heading5">AED {totalBeforeTaxes}</div>
                         </div>
-                        <div className="button-main w-full text-center mt-5"> <Link href='/checkout'>Book Now</Link></div>
+                        <div className="button-main w-full text-center mt-5">   <button onClick={handleBookNow}>Book Now</button></div>
                           <a
   href="https://wa.me/918197723683"
   target="_blank"
