@@ -48,7 +48,7 @@ const DemoBook = () => {
 
     // Calculate number of nights and total price
     const nights = differenceInDays(state[0].endDate, state[0].startDate);
-    const nightlyRate = 2; // AED 200 per night
+    const nightlyRate = 200; // AED 200 per night
     const totalBeforeTaxes = nights * nightlyRate;
 
     const handleOpenDate = () => {
