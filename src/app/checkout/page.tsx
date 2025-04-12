@@ -233,8 +233,8 @@ const Checkout = () => {
         <div
           className="w-full lg:w-1/3 bg-white p-6 rounded-2xl"
           style={{
-            boxShadow: 'rgba(10, 10, 0.22) 0px 3px 9px',
-            borderRadius: '20px',
+            boxShadow: 'rgba(10, 10, 10, 0.22) 0px 3px 9px',
+            border: '1px solid rgb(221, 221, 221)',
             position: 'sticky',
             top: '100px',
           }}
