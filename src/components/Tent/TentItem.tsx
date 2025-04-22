@@ -87,14 +87,14 @@ const TentItem: React.FC<Props> = ({ data, type }) => {
                     </div>
                     <div className="infor mt-4">
                         <div className="flex items-center justify-between flex-wrap gap-2">
-                            <div className="flex items-center gap-1">
+                            {/* <div className="flex items-center gap-1">
                                 <Icon.MapPin className='md:text-xl text-variant1' />
                                 <div className="caption1 text-variant1">100 km</div>
                             </div>
                             <div className="flex items-center gap-1">
                                 <div className="text-button-sm">{data.rate}</div>
                                 <Icon.Star className='text-yellow' weight='fill' />
-                            </div>
+                            </div> */}
                         </div>
                         <div className="name text-title capitalize mt-1">{data.name}</div>
                         <div className="flex items-center justify-between gap-2 mt-1">

@@ -224,14 +224,43 @@ const HeaderOne = () => {
                                     About us
                                 </Link>
                             </li>
+
                             <li className='h-full relative'>
+                                <Link
+                                    href="#!"
+                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/' || pathname.includes('/homepages/') ? 'active' : ''}`}
+                                >
+                                Room
+                                </Link>
+                                <div className="sub-menu absolute bg-white">
+                                    <ul>
+                                        <li>
+                                            <Link href="/camp/dubai" className={`link text-button1 text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/' ? 'active' : ''}`}>
+                                              Dubai
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="#" className={`link text-button1 text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
+                                              Mangalore
+                                            </Link>
+                                        </li>
+                                     
+                                    </ul>
+                                </div>
+                            </li>
+
+
+
+
+
+                            {/* <li className='h-full relative'>
                                 <Link
                                     href="/camp/tent-detail"
                                     className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
                                 >
                                    Room
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className='h-full relative'>
                                 <Link
                                     href="#"
@@ -240,6 +269,7 @@ const HeaderOne = () => {
                                     Contact
                                 </Link>
                             </li>
+                            
                         </ul>
                     </div>
                     <div className="right flex items-center gap-3  lg:hidden"  >
