@@ -9,6 +9,16 @@ import Footer from '@/components/Footer/Footer';
 
 const Checkout = () => {
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'cod'>('card');
+  const [showPopup, setShowPopup] = useState(false);
+  const [billingData, setBillingData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    streetAddress: '',
+    city: '',
+    zipCode: ''
+  });
 
   const searchParams = useSearchParams();
   const startDate = searchParams.get('startDate');
@@ -60,6 +70,7 @@ const Checkout = () => {
       description: 'Booking Payment',
       handler: function (response: any) {
         alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+        setShowPopup(true);  // Show the success popup
       },
       prefill: {
         name: 'Customer Name',
@@ -73,6 +84,35 @@ const Checkout = () => {
 
     const rzp = new (window as any).Razorpay(options);
     rzp.open();
+  };
+
+  const handleSubmit = () => {
+    const message = `
+      *Booking Details:*
+      - Check-In Date: ${formattedStartDate}
+      - Check-Out Date: ${formattedEndDate}
+      - Guests: ${guests}
+      - Adults: ${adults}
+      - Children: ${children}
+      - Pets: ${pets}
+      
+      *Billing Address:*
+      - Name: ${billingData.firstName} ${billingData.lastName}
+      - Email: ${billingData.email}
+      - Phone: ${billingData.phone}
+      - Address: ${billingData.streetAddress}, ${billingData.city}, ${billingData.zipCode}
+
+      *Total Price:* ${totalPrice}
+    `;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // WhatsApp API URL to send the message
+    const whatsappUrl = `https://wa.me/+917483156464?text=${encodedMessage}`;
+
+    // Open WhatsApp chat
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -141,7 +181,6 @@ const Checkout = () => {
                           </div>
                         </div>
                       )}
-
                     </div>
                   </div>
                 </div>
@@ -156,13 +195,69 @@ const Checkout = () => {
                     <div className="border-b pb-4 mb-6 mt-4">
                       <h2 className="font-semibold text-lg mb-4">Billing Address</h2>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                        <input type="text" placeholder="First Name" className="border border-[#3274BD] p-3 rounded-md w-full" />
-                        <input type="text" placeholder="Last Name" className="border border-[#3274BD] p-3 rounded-md w-full" />
-                        <input type="email" placeholder="Email Address" className="border border-[#3274BD] p-3 rounded-md w-full" />
-                        <input type="tel" placeholder="Phone Number" className="border border-[#3274BD] p-3 rounded-md w-full" />
-                        <input type="text" placeholder="Street Address" className="border border-[#3274BD] p-3 rounded-md w-full sm:col-span-2" />
-                        <input type="text" placeholder="City" className="border border-[#3274BD] p-3 rounded-md w-full" />
-                        <input type="text" placeholder="Zip Code" className="border border-[#3274BD] p-3 rounded-md w-full" />
+                        <input
+                          type="text"
+                          placeholder="First Name"
+                          className="border border-[#3274BD] p-3 rounded-md w-full"
+                          value={billingData.firstName}
+                          onChange={(e) =>
+                            setBillingData((prev) => ({ ...prev, firstName: e.target.value }))
+                          }
+                        />
+                        <input
+                          type="text"
+                          placeholder="Last Name"
+                          className="border border-[#3274BD] p-3 rounded-md w-full"
+                          value={billingData.lastName}
+                          onChange={(e) =>
+                            setBillingData((prev) => ({ ...prev, lastName: e.target.value }))
+                          }
+                        />
+                        <input
+                          type="email"
+                          placeholder="Email Address"
+                          className="border border-[#3274BD] p-3 rounded-md w-full"
+                          value={billingData.email}
+                          onChange={(e) =>
+                            setBillingData((prev) => ({ ...prev, email: e.target.value }))
+                          }
+                        />
+                        <input
+                          type="tel"
+                          placeholder="Phone Number"
+                          className="border border-[#3274BD] p-3 rounded-md w-full"
+                          value={billingData.phone}
+                          onChange={(e) =>
+                            setBillingData((prev) => ({ ...prev, phone: e.target.value }))
+                          }
+                        />
+                        <input
+                          type="text"
+                          placeholder="Street Address"
+                          className="border border-[#3274BD] p-3 rounded-md w-full sm:col-span-2"
+                          value={billingData.streetAddress}
+                          onChange={(e) =>
+                            setBillingData((prev) => ({ ...prev, streetAddress: e.target.value }))
+                          }
+                        />
+                        <input
+                          type="text"
+                          placeholder="City"
+                          className="border border-[#3274BD] p-3 rounded-md w-full"
+                          value={billingData.city}
+                          onChange={(e) =>
+                            setBillingData((prev) => ({ ...prev, city: e.target.value }))
+                          }
+                        />
+                        <input
+                          type="text"
+                          placeholder="Zip Code"
+                          className="border border-[#3274BD] p-3 rounded-md w-full"
+                          value={billingData.zipCode}
+                          onChange={(e) =>
+                            setBillingData((prev) => ({ ...prev, zipCode: e.target.value }))
+                          }
+                        />
                       </div>
                     </div>
                   </div>
@@ -210,7 +305,10 @@ const Checkout = () => {
 
               {paymentMethod === 'cod' && (
                 <div className="flex justify-center items-center gap-4 mb-6 h-full">
-                  <button className="w-32 bg-transparent hover:bg-[#32548E] text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                  <button
+                    onClick={handleSubmit}
+                    className="w-32 bg-transparent hover:bg-[#32548E] text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                  >
                     Submit
                   </button>
                 </div>
@@ -257,7 +355,27 @@ const Checkout = () => {
             </div>
           </div>
         </div>
+
+        {/* Payment Success Popup */}
+        {showPopup && (
+  <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+    <div className="bg-white p-6 rounded-lg shadow-2xl max-w-xs w-full sm:max-w-md md:max-w-lg">
+      <h3 className="text-lg font-semibold mb-4 text-center">Payment Successful</h3>
+      <p className="text-sm mb-4 text-center">Your payment was successful! You can now confirm the booking.</p>
+      <div className="flex justify-center">
+        <button
+          onClick={handleSubmit}
+          className="w-32 bg-transparent hover:bg-[#32548E] text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        >
+          Send
+        </button>
       </div>
+    </div>
+  </div>
+)}
+
+      </div>
+
       <Footer />
     </>
   );

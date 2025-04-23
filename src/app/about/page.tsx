@@ -23,8 +23,9 @@ const About = () => {
             <div className="video-greeting lg:pt-20 md:pt-14 pt-10">
                 <div className="container">
                     <div className="heading flex flex-col items-center justify-center">
-                        <div className="heading2 text-center">Welcome to the GlampHub</div>
-                        <div className="body2 text-variant1 text-center mt-4">Less than a 2.5 hour drive from downtown Boston and convenient to the trailheads, scenic views and swimming holes of the White Mountain National Forest, Huttopia White Mountains is an ideal place to escape to nature.</div>
+                        <div className="heading2 text-center">Welcome to Aizah Hospitality — where comfort meets care.
+</div>
+                        <div className="body2 text-variant1 text-center mt-4">Aizah Hospitality was born from a blend of precision, passion, and wanderlust. With a background in engineering and the privilege of traveling across diverse countries, the vision behind Aizah Hospitality is deeply rooted in an appreciation for thoughtful design and the unique beauty of global hospitality.</div>
                     </div>
                     <div className="video-block relative rounded-[20px] overflow-hidden md:mt-10 mt-6">
                         <div className="bg-img w-full">
@@ -54,10 +55,10 @@ const About = () => {
                     <iframe src="https://www.youtube.com/embed/ilY3WAUTXaE?si=ryu4TuMisTtYqW3L"></iframe>
                 </div>
             </div>
-            <Amenities />
+            {/* <Amenities /> */}
             <Benefit />
-            <Testimonial data={testimonialData} />
-            <div className="team-block lg:pt-20 md:pt-14 pt-10">
+            {/* <Testimonial data={testimonialData} /> */}
+            <div className="team-block lg:pt-20 md:pt-14 pt-10 mb-10">
                 <div className="container">
                     <TextHeading title='Meet our Team' subTitle='Our team of Glamping enthusiasts and experts is at the heart of our mission' />
                     <div className="list grid md:grid-cols-3 gap-[30px] md:mt-10 mt-6">
@@ -133,7 +134,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="cta-block lg:my-20 md:my-14 my-10">
+            {/* <div className="cta-block lg:my-20 md:my-14 my-10">
                 <div className="container">
                     <div className="content-main bg-surface sm:py-10 py-8 lg:px-[60px] sm:px-10 px-8 rounded-[20px] sm:flex items-center justify-between">
                         <div className="left sm:w-3/5">
@@ -145,7 +146,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <Footer />
         </>
     )

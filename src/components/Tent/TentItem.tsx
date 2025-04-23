@@ -98,7 +98,8 @@ const TentItem: React.FC<Props> = ({ data, type }) => {
                         </div>
                         <div className="name text-title capitalize mt-1">{data.name}</div>
                         <div className="flex items-center justify-between gap-2 mt-1">
-                            <div className="text-variant1">Nov. 12 - 15</div>
+                            <div className="text-variant1"></div>
+                            {/* <div className="text-variant1">Nov. 12 - 15ss</div> */}
                             <div className="flex lg:items-end">
                                 <span className='text-button'>${data.price}</span>
                                 <span className='caption1 text-variant1'>/night</span></div>

@@ -211,14 +211,14 @@ const HeaderOne = () => {
                             <li className='h-full relative'>
                                 <Link
                                     href="#"
-                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/' ? 'active' : ''}`}
                                 >
                                     Home
                                 </Link>
                             </li>
                             <li className='h-full relative'>
                                 <Link
-                                    href="#"
+                                    href="/about"
                                     className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
                                 >
                                     About us
@@ -264,7 +264,7 @@ const HeaderOne = () => {
                             <li className='h-full relative'>
                                 <Link
                                     href="#"
-                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''}`}
+                                    className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/Contact' ? 'active' : ''}`}
                                 >
                                     Contact
                                 </Link>
