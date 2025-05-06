@@ -122,8 +122,9 @@ const SliderOne = () => {
                             <div className="heading6 text-white text-center mt-3">Reserve beautiful private RV spots and campsites—found <br className='max-sm:hidden' />only on Hipcamp.</div>
                         </div>
 
-                        <div className="form-search md:mt-10 mt-6 w-full">
-                            <form className='bg-white rounded-lg p-5 flex max-lg:flex-wrap items-center justify-between gap-5 relative'>
+                        {/* <div className="form-search md:mt-10 mt-6 w-full " > */}
+                        <div className="form-search md:mt-10 mt-6 w-full flex justify-center items-center"  style={{marginTop:'20px'}}>
+                            <form className='bg-white rounded-lg p-2 flex max-lg:flex-wrap items-center justify-between gap-5 relative ' style={{width:'80%'}} >
                                 <div className="select-block lg:w-full md:w-[48%] w-full">
                                     <Icon.MapPin className='icon text-xl left-5' />
                                     <input

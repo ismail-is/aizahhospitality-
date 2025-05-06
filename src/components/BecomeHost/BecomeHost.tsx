@@ -5,7 +5,7 @@ import Link from 'next/link'
 const BecomeHost = () => {
     return (
         <>
-            <div className="become-host lg:pt-20 md:pt-14 pt-10">
+            <div className="become-host lg:pt-20 md:pt-14 pt-10 " style={{marginTop:'-120px'}}>
                 <div className="container">
                     <div className="content-main xl:h-auto h-[500px] rounded-[20px] overflow-hidden relative">
                         <Image

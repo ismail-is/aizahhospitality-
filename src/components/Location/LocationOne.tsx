@@ -33,7 +33,16 @@ const LocationOne = () => {
                                 />
                             </div>
                             <div className="name heading5 sm:mt-5 mt-3">Chic 1 BHK</div>
-                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                            <div className='flex  items-center  gap-6'>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
+    <div className="body2">4 Guests</div>
+  </div>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-bed  text-[20px] text-[#32548e]"></span>
+    <div className="body2">1 Room</div>
+  </div>
+  </div>
                             </Link>
                         </div>
                         <div
@@ -53,7 +62,16 @@ const LocationOne = () => {
                             </div>
                           
                             <div className="name heading5 sm:mt-5 mt-3">Dubai mall</div>
-                            <div className="text-variant1 sm:mt-1">10+ accommodations</div>
+                            <div className='flex  items-center  gap-6'>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
+    <div className="body2">3 Guests</div>
+  </div>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-bed  text-[20px] text-[#32548e]"></span>
+    <div className="body2">1 Room</div>
+  </div>
+  </div>
                             </Link>
                         </div>
                         <div
@@ -72,10 +90,113 @@ const LocationOne = () => {
                                 />
                             </div>
                             <div className="name heading5 sm:mt-5 mt-3">Chic studio</div>
-                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                            <div className='flex  items-center  gap-6'>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
+    <div className="body2">2 Guests</div>
+  </div>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-bed  text-[20px] text-[#32548e]"></span>
+    <div className="body2">1 Room</div>
+  </div>
+  </div>
+                            </Link>
+                        </div>
+
+
+                        <div
+                            className="item hover-scale"
+                            // onClick={() => handleClickContinents('Africa')}
+                        >
+                             <Link href='camp/tent-detail'>
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/allimg/rooms/2.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='1.png'
+                                    priority={true}
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">Chic 1 BHK</div>
+                            <div className='flex  items-center  gap-6'>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
+    <div className="body2">4 Guests</div>
+  </div>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-bed  text-[20px] text-[#32548e]"></span>
+    <div className="body2">1 Room</div>
+  </div>
+  </div>
                             </Link>
                         </div>
                         <div
+                            className="item hover-scale"
+                            // onClick={() => handleClickContinents('Asia')}
+                        >
+                            <Link href='camp/dubai-mall'>
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/allimg/demo/3.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='2.png'
+                                    priority={true}
+                                    className='w-full'
+                                />
+                            </div>
+                          
+                            <div className="name heading5 sm:mt-5 mt-3">Dubai mall</div>
+                            <div className='flex  items-center  gap-6'>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
+    <div className="body2">3 Guests</div>
+  </div>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-bed  text-[20px] text-[#32548e]"></span>
+    <div className="body2">1 Room</div>
+  </div>
+  </div>
+                            </Link>
+                        </div>
+                        <div
+                            className="item hover-scale"
+                            // onClick={() => handleClickContinents('Europe')}
+                        >
+                             <Link href='camp/chic-studio'>
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/allimg/rooms/5.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='3.png'
+                                    priority={true}
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3">Chic studio</div>
+                            <div className='flex  items-center  gap-6'>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
+    <div className="body2">2 Guests</div>
+  </div>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-bed  text-[20px] text-[#32548e]"></span>
+    <div className="body2">1 Room</div>
+  </div>
+  </div>
+                            </Link>
+                        </div>
+
+
+
+
+
+
+
+                        {/* <div
                             className="item hover-scale"
                             onClick={() => handleClickContinents('North America')}
                         >
@@ -125,7 +246,7 @@ const LocationOne = () => {
                             </div>
                             <div className="name heading5 sm:mt-5 mt-3">South America</div>
                             <div className="text-variant1 sm:mt-1">460 accommodations</div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

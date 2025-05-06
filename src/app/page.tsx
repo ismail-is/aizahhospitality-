@@ -13,20 +13,23 @@ import Testimonial from '@/components/Testimonial/Testimonial'
 import dataTestimonial from '@/data/Testimonial.json'
 import News from '@/components/News/News'
 import Footer from '@/components/Footer/Footer'
+import HeaderTwo from '@/components/Header/HeaderTwo'
 
 const Home = () => {
   return (
     <>
       <div className="page-one overflow-x-hidden">
-        <HeaderOne />
+        <HeaderTwo />
         <SliderOne />
         <LocationOne />
+        <br/>
+        <br/>
         <CategoryOne />
         <RecommendOne data={tentData} start={10} end={18} />
         <BecomeHost />
-        <Amenities />
+        {/* <Amenities /> */}
         <Testimonial data={dataTestimonial} />
-        <News />
+        {/* <News /> */}
         <Footer />
       </div>
     </>

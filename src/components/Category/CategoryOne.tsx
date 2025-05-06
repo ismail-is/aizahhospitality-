@@ -13,53 +13,56 @@ const CategoryOne = () => {
 
     return (
         <>
-            <div className="category-block lg:pt-20 md:pt-14 pt-10">
-                <div className="container">
-                    <TextHeading title='Try Searching For' subTitle='Explore Distinctive Selections with Our Thoughtfully Curated Categories' />
+            <div className="category-block lg:pt-20 md:pt-14 pt-10 pb-10  bg-[#32548E]">
+                <div className="container ">
+                    {/* <TextHeading title='Try Searching For'/> */}
+                    <div className="heading3 text-center  text-white ">Try Searching For</div>
+                    <div className="body2 text-white text-center sm:mt-3 mt-2">Explore Distinctive Selections with Our Thoughtfully Curated Categories</div>
                     <div className="list-cate grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 lg:gap-[30px] gap-5 md:mt-10 mt-6">
                         <div
-                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                            className={`item bg-surface py-[22px]  text-[#32548E]  flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white`}
                             onClick={() => handleClickCate('cabin')}
                         >
-                            <span className='icon-cabin text-4xl'></span>
-                            <div className="text-title mt-2">Cabin</div>
+                            
+                            <span className='fi fi-rr-bed text-4xl '></span>
+                            <div className="text-title mt-2">1 BhK  </div>
                         </div>
                         <div
-                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
                             onClick={() => handleClickCate('tented cabins')}
                         >
-                            <span className='icon-tented-cabin text-4xl'></span>
-                            <div className="text-title mt-2">Tented Cabins</div>
+                            <span className='fi fi-rr-train   text-4xl '></span>
+                            <div className="text-title mt-2 text-center">Near Metro <br/>Station </div>
                         </div>
                         <div
-                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
                             onClick={() => handleClickCate('safari tents')}
                         >
-                            <span className='icon-safari-tent text-4xl'></span>
-                            <div className="text-title mt-2">Safari Tents</div>
+                            <span className='fi fi-rr-building  text-4xl '></span>
+                            <div className="text-title mt-2 text-center">Near Downtown <br/> Dubai </div>
                         </div>
                         <div
-                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
                             onClick={() => handleClickCate('cottages')}
                         >
-                            <span className='icon-cottages text-4xl'></span>
-                            <div className="text-title mt-2">Cottages</div>
+                             <span className='fi fi-rr-restaurant  text-4xl '></span>
+                            <div className="text-title mt-2">Kitchen </div>
                         </div>
                         <div
-                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
                             onClick={() => handleClickCate('tiny houses')}
                         >
-                            <span className='icon-tiny-house text-4xl'></span>
-                            <div className="text-title mt-2">Tiny Houses</div>
+                            <span className='fi fi-rr-swimmer   text-4xl '></span>
+                            <div className="text-title mt-2">Swimming Poo</div>
                         </div>
                         <div
-                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
+                            className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
                             onClick={() => handleClickCate('caravans')}
                         >
-                            <span className='icon-cravan text-4xl'></span>
-                            <div className="text-title mt-2">Caravans</div>
+                            <span className='fi fi-rr-house-laptop  text-4xl '></span>
+                            <div className="text-title mt-2">Work Space</div>
                         </div>
-                        <div
+                        {/* <div
                             className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
                             onClick={() => handleClickCate('Domes')}
                         >
@@ -100,7 +103,7 @@ const CategoryOne = () => {
                         >
                             <span className='icon-cottages text-4xl'></span>
                             <div className="text-title mt-2">Tree Houses</div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

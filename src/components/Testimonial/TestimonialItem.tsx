@@ -27,7 +27,7 @@ const TestimonialItem: React.FC<Props> = ({ data }) => {
                         />
                         <div>
                             <div className="text-title name">{data.name}</div>
-                            <div className="caption1 date text-variant1 mt-1">{data.position}</div>
+                            {/* <div className="caption1 date text-variant1 mt-1">{data.position}</div> */}
                         </div>
                     </div>
                 </div>
