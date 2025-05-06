@@ -11,10 +11,10 @@ const TestimonialItem: React.FC<Props> = ({ data }) => {
     return (
         <>
             <div className="testimonial-item style-six h-full">
-                <div className="testimonial-main flex flex-col justify-between h-full p-10 rounded-[20px] bg-surface">
+                <div className="testimonial-main flex flex-col justify-between h-full p-10 rounded-[20px] bg-[#32548E]">
                     <div>
                         <Rate currentRate={data.star} classname='md:text-xl text-base' />
-                        <div className="body2 desc mt-3">{String.raw`"`}{data.description}{String.raw`"`}</div>
+                        <div className="body2 desc mt-3 text-white">{String.raw`"`}{data.description}{String.raw`"`}</div>
                     </div>
                     <div className="flex items-center gap-3 md:mt-6 mt-4">
                         <Image
@@ -26,7 +26,7 @@ const TestimonialItem: React.FC<Props> = ({ data }) => {
                             className='md:w-[60px] w-[52px] md:h-[60px] h-[52px] rounded-full flex-shrink-0'
                         />
                         <div>
-                            <div className="text-title name">{data.name}</div>
+                            <div className="text-title name text-white">{data.name}</div>
                             {/* <div className="caption1 date text-variant1 mt-1">{data.position}</div> */}
                         </div>
                     </div>

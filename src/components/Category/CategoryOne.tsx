@@ -19,48 +19,61 @@ const CategoryOne = () => {
                     <div className="heading3 text-center  text-white ">Try Searching For</div>
                     <div className="body2 text-white text-center sm:mt-3 mt-2">Explore Distinctive Selections with Our Thoughtfully Curated Categories</div>
                     <div className="list-cate grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 lg:gap-[30px] gap-5 md:mt-10 mt-6">
+                       
                         <div
                             className={`item bg-surface py-[22px]  text-[#32548E]  flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white`}
-                            onClick={() => handleClickCate('cabin')}
+                            // onClick={() => handleClickCate('cabin')}
                         >
-                            
-                            <span className='fi fi-rr-bed text-4xl '></span>
-                            <div className="text-title mt-2">1 BhK  </div>
+                           
+                            <span className='fi fi-rr-users   text-4xl '></span>
+                            <Link href='camp/tent-detail'>
+                            <div className="text-title mt-2">couples </div>
+                            </Link>
                         </div>
                         <div
                             className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
-                            onClick={() => handleClickCate('tented cabins')}
+                            // onClick={() => handleClickCate('tented cabins')}
                         >
                             <span className='fi fi-rr-train   text-4xl '></span>
+                            <Link href='camp/tent-detail'>
                             <div className="text-title mt-2 text-center">Near Metro <br/>Station </div>
+                            </Link>
                         </div>
                         <div
                             className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
-                            onClick={() => handleClickCate('safari tents')}
+                            // onClick={() => handleClickCate('safari tents')}
                         >
                             <span className='fi fi-rr-building  text-4xl '></span>
+                            <Link href='camp/tent-detail'>
                             <div className="text-title mt-2 text-center">Near Downtown <br/> Dubai </div>
+                            </Link>
                         </div>
                         <div
                             className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
-                            onClick={() => handleClickCate('cottages')}
+                            // onClick={() => handleClickCate('cottages')}
                         >
                              <span className='fi fi-rr-restaurant  text-4xl '></span>
+                             <Link href='camp/tent-detail'>
                             <div className="text-title mt-2">Kitchen </div>
+                            </Link>
                         </div>
                         <div
                             className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
-                            onClick={() => handleClickCate('tiny houses')}
+                            // onClick={() => handleClickCate('tiny houses')}
                         >
                             <span className='fi fi-rr-swimmer   text-4xl '></span>
-                            <div className="text-title mt-2">Swimming Poo</div>
+                            <Link href='camp/tent-detail'>
+                            <div className="text-title mt-2">Swimming Pool</div>
+                            </Link>
                         </div>
                         <div
                             className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-[#627eb0] hover:text-white  text-[#32548E]`}
-                            onClick={() => handleClickCate('caravans')}
+                            // onClick={() => handleClickCate('caravans')}
                         >
                             <span className='fi fi-rr-house-laptop  text-4xl '></span>
+                            <Link href='camp/tent-detail'>
                             <div className="text-title mt-2">Work Space</div>
+                            </Link>
                         </div>
                         {/* <div
                             className={`item bg-surface py-[22px] flex flex-col items-center rounded-xl duration-300 cursor-pointer hover:bg-black hover:text-white`}
