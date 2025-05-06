@@ -137,13 +137,12 @@ const SliderOne = () => {
                                 <div className="relative lg:w-full md:w-[48%] w-full">
                                     <div className='select-block w-full' onClick={handleOpenDate}>
                                         <Icon.CalendarBlank className='icon text-xl left-5' />
-                                        {/* <input className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg' type="text" placeholder='Add Dates' /> */}
                                         <input
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
                                             placeholder='Add Dates'
                                             value={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
-                                            readOnly // prevent user edit value
+                                            readOnly 
                                         />
                                     </div>
                                     <DateRangePicker

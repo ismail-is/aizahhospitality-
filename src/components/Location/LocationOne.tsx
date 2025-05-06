@@ -19,11 +19,12 @@ const LocationOne = () => {
                     <div className="list-location grid lg:grid-cols-3 min-[370px]:grid-cols-2 md:gap-[30px] gap-y-7 gap-4 md:mt-10 mt-6">
                         <div
                             className="item hover-scale"
-                            onClick={() => handleClickContinents('Africa')}
+                            // onClick={() => handleClickContinents('Africa')}
                         >
+                             <Link href='camp/tent-detail'>
                             <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
                                 <Image
-                                    src={'/images/location/410x273.png'}
+                                    src={'/images/allimg/rooms/2.png'}
                                     width={3000}
                                     height={2000}
                                     alt='1.png'
@@ -31,16 +32,18 @@ const LocationOne = () => {
                                     className='w-full'
                                 />
                             </div>
-                            <div className="name heading5 sm:mt-5 mt-3">Africa</div>
+                            <div className="name heading5 sm:mt-5 mt-3">Chic 1 BHK</div>
                             <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                            </Link>
                         </div>
                         <div
                             className="item hover-scale"
-                            onClick={() => handleClickContinents('Asia')}
+                            // onClick={() => handleClickContinents('Asia')}
                         >
+                            <Link href='camp/dubai-mall'>
                             <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
                                 <Image
-                                    src={'/images/location/410x273.png'}
+                                    src={'/images/allimg/demo/3.png'}
                                     width={3000}
                                     height={2000}
                                     alt='2.png'
@@ -48,16 +51,19 @@ const LocationOne = () => {
                                     className='w-full'
                                 />
                             </div>
-                            <div className="name heading5 sm:mt-5 mt-3">Asia</div>
-                            <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                          
+                            <div className="name heading5 sm:mt-5 mt-3">Dubai mall</div>
+                            <div className="text-variant1 sm:mt-1">10+ accommodations</div>
+                            </Link>
                         </div>
                         <div
                             className="item hover-scale"
-                            onClick={() => handleClickContinents('Europe')}
+                            // onClick={() => handleClickContinents('Europe')}
                         >
+                             <Link href='camp/chic-studio'>
                             <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
                                 <Image
-                                    src={'/images/location/410x273.png'}
+                                    src={'/images/allimg/rooms/5.png'}
                                     width={3000}
                                     height={2000}
                                     alt='3.png'
@@ -65,8 +71,9 @@ const LocationOne = () => {
                                     className='w-full'
                                 />
                             </div>
-                            <div className="name heading5 sm:mt-5 mt-3">Europe</div>
+                            <div className="name heading5 sm:mt-5 mt-3">Chic studio</div>
                             <div className="text-variant1 sm:mt-1">460 accommodations</div>
+                            </Link>
                         </div>
                         <div
                             className="item hover-scale"
