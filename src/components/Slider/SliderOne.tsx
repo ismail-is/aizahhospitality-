@@ -107,7 +107,7 @@ const SliderOne = () => {
             <div className="slider-block style-one relative h-[620px]">
                 <div className="bg-img absolute top-0 left-0 w-full h-full">
                     <Image
-                        src={'/images/slider/slider-home1.png'}
+                        src={'/images/allimg/banners.webp'}
                         width={4000}
                         height={3000}
                         alt='slider'
@@ -118,8 +118,9 @@ const SliderOne = () => {
                 <div className="container py-[176px]">
                     <div className="content w-full relative">
                         <div className="heading flex-col items-center justify-center">
-                            <div className="heading2 text-white text-center">Find yourself outside</div>
-                            <div className="heading6 text-white text-center mt-3">Reserve beautiful private RV spots and campsites—found <br className='max-sm:hidden' />only on Hipcamp.</div>
+                            <div className="heading2 text-white text-center">A Standard of Luxury Living Awaits You in Dubai with Aizah Hospitality </div>
+                            <div className="heading6 text-white text-center mt-3"> Elegant Rooms in the Heart of Dubai
+                            </div>
                         </div>
 
                         {/* <div className="form-search md:mt-10 mt-6 w-full " > */}

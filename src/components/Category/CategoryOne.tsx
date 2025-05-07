@@ -16,8 +16,8 @@ const CategoryOne = () => {
             <div className="category-block lg:pt-20 md:pt-14 pt-10 pb-10  bg-[#32548E]">
                 <div className="container ">
                     {/* <TextHeading title='Try Searching For'/> */}
-                    <div className="heading3 text-center  text-white ">Try Searching For</div>
-                    <div className="body2 text-white text-center sm:mt-3 mt-2">Explore Distinctive Selections with Our Thoughtfully Curated Categories</div>
+                    <div className="heading3 text-center  text-white ">Thoughtfully Crafted for Every Traveler</div>
+                    <div className="body2 text-white text-center sm:mt-3 mt-2">Everything You Need, Right Where You Stay</div>
                     <div className="list-cate grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 lg:gap-[30px] gap-5 md:mt-10 mt-6">
                        
                         <div

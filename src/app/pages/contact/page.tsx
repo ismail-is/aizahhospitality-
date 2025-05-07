@@ -47,21 +47,21 @@ const Contact = () => {
                                             <Icon.EnvelopeSimpleOpen className='text-white text-2xl' />
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
-                                        <div className="body2">hi.avitex@gmail.com</div>
+                                        <div className="body2">demo@gmail.com</div>
                                     </div>
                                     <div className="item flex items-center gap-6 mt-5">
                                         <div className='flex items-center justify-center w-12 h-12 bg-primary flex-shrink-0 rounded-full'>
                                             <Icon.Phone className='text-white text-2xl' />
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
-                                        <div className="body2">1-333-345-6868</div>
+                                        <div className="body2">+91 81977 23683 </div>
                                     </div>
                                     <div className="item flex items-center gap-6 mt-5">
                                         <div className='flex items-center justify-center w-12 h-12 bg-primary flex-shrink-0 rounded-full'>
                                             <Icon.MapPinLine className='text-white text-2xl' />
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
-                                        <div className="body2">101 E 129th St, East Chicago, IN 46312, US</div>
+                                        <div className="body2">Dubai - United Arab Emirates</div>
                                     </div>
                                 </div>
                             </div>

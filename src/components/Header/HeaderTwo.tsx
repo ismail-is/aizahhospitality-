@@ -263,7 +263,7 @@ const HeaderTwo = () => {
                             </li> */}
                             <li className='h-full relative'>
                                 <Link
-                                    href="#"
+                                    href="/pages/contact"
                                     className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/Contact' ? 'active' : ''}`}
                                 >
                                     Contact
