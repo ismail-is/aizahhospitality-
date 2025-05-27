@@ -24,40 +24,43 @@ const Contact = () => {
                                 </div>
                                 <div className="style-contact-us">
                                     <div className="list-social flex items-center flex-wrap gap-5 mt-4">
-                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-primary hover:bg-primary hover:text-white" href="https://www.facebook.com/" target="_blank">
-                                            <i className="icon-facebook md:text-xl text-lg"></i>
+                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-[#f1dd38] hover:bg-[#32548E] hover:text-white" href="https://www.facebook.com/" target="_blank">
+                                            {/* <i className="icon-facebook "></i> */}
+                                            <span className="fi fi-brands-facebook  md:text-xl text-lg"></span>
                                         </Link>
-                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-primary hover:bg-primary hover:text-white" href="https://www.linkedin.com/" target="_blank">
-                                            <i className="icon-linkedin md:text-xl text-lg"></i>
+                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-[#f1dd38] hover:bg-[#32548E] hover:text-white" href="https://www.instagram.com/" target="_blank">
+                                        <span className="fi fi-brands-instagram  md:text-xl text-lg"></span>
                                         </Link>
-                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-primary hover:bg-primary hover:text-white" href="https://www.twitter.com/" target="_blank">
-                                            <i className="icon-twitter md:text-xl text-lg"></i>
+                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-[#f1dd38] hover:bg-[#32548E] hover:text-white" href="https://www.twitter.com/" target="_blank">
+                                        <span className="fi fi-brands-whatsapp  md:text-xl text-lg"></span>
                                         </Link>
-                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-primary hover:bg-primary hover:text-white" href="https://www.youtube.com/" target="_blank">
-                                            <i className="icon-youtube md:text-xl text-lg"></i>
+                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-[#f1dd38] hover:bg-[#32548E] hover:text-white" href="https://www.linkedin.com/" target="_blank">
+                                        <span className="fi fi-brands-linkedin  md:text-xl text-lg"></span>
                                         </Link>
-                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-primary hover:bg-primary hover:text-white" href="https://www.instagram.com/" target="_blank">
-                                            <i className="icon-instagram md:text-lg text-base"></i>
+                                       
+                                        <Link className="item rounded-full md:w-[52px] w-12 md:h-[52px] h-12 flex items-center justify-center flex-shrink-0 border border-outline text-variant1 duration-500 hover:border-[#f1dd38] hover:bg-[#32548E] hover:text-white" href="https://www.youtube.com/" target="_blank">
+                                        <span className="fi fi-rr-envelope  md:text-xl text-lg"></span>
                                         </Link>
+                                      
                                     </div>
                                 </div>
                                 <div className="list-more-infor mt-10">
                                     <div className="item flex items-center gap-6">
-                                        <div className='flex items-center justify-center w-12 h-12 bg-primary flex-shrink-0 rounded-full'>
+                                        <div className='flex items-center justify-center w-12 h-12 bg-[#32548E] flex-shrink-0 rounded-full'>
                                             <Icon.EnvelopeSimpleOpen className='text-white text-2xl' />
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
                                         <div className="body2">demo@gmail.com</div>
                                     </div>
                                     <div className="item flex items-center gap-6 mt-5">
-                                        <div className='flex items-center justify-center w-12 h-12 bg-primary flex-shrink-0 rounded-full'>
+                                        <div className='flex items-center justify-center w-12 h-12 bg-[#32548E] flex-shrink-0 rounded-full'>
                                             <Icon.Phone className='text-white text-2xl' />
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
                                         <div className="body2">+91 81977 23683 </div>
                                     </div>
                                     <div className="item flex items-center gap-6 mt-5">
-                                        <div className='flex items-center justify-center w-12 h-12 bg-primary flex-shrink-0 rounded-full'>
+                                        <div className='flex items-center justify-center w-12 h-12 bg-[#32548E] flex-shrink-0 rounded-full'>
                                             <Icon.MapPinLine className='text-white text-2xl' />
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>

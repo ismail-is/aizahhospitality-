@@ -17,7 +17,7 @@ const RecommendOne: React.FC<Props> = ({ data, start, end }) => {
         <>
             <div className="recommend-block lg:pt-10 md:pt-14 pt-10">
                 <div className="container">
-                    <TextHeading title='Discovery Luxury Camping Near You On Glamp Hub' subTitle='Explore Luxe Camping Near You with Glamp Hub' />
+                    <TextHeading title=' Warm Hospitality, Courtesy of Aizah Hospitality ' subTitle='Personalized Attention to Make Your Stay Truly Special' />
                     <div className="list-cate grid lg:grid-cols-4 md:grid-cols-3 min-[360px]:grid-cols-2 lg:gap-[30px] gap-4 gap-y-7 md:mt-10 mt-2">
                         {data.slice(start, end).map(item => (
                             <TentItem key={item.id} data={item} type='default' />

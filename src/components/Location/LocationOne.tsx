@@ -108,10 +108,10 @@ const LocationOne = () => {
                             className="item hover-scale"
                             // onClick={() => handleClickContinents('Africa')}
                         >
-                             <Link href='camp/tent-detail'>
+                             <Link href='camp/merano'>
                             <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
                                 <Image
-                                    src={'/images/allimg/rooms/2.png'}
+                                    src={'/images/allimg/rooms/Merano/3.png'}
                                     width={3000}
                                     height={2000}
                                     alt='1.png'
@@ -119,7 +119,7 @@ const LocationOne = () => {
                                     className='w-full'
                                 />
                             </div>
-                            <div className="name heading5 sm:mt-5 mt-3">Chic 1 BHK</div>
+                            <div className="name heading5 sm:mt-5 mt-3">Merano 1710</div>
                             <div className='flex  items-center  gap-6'>
                             <div className="flex items-center gap-3">
     <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
@@ -136,10 +136,10 @@ const LocationOne = () => {
                             className="item hover-scale"
                             // onClick={() => handleClickContinents('Asia')}
                         >
-                            <Link href='camp/dubai-mall'>
+                            <Link href='camp/majestine'>
                             <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
                                 <Image
-                                    src={'/images/allimg/demo/3.png'}
+                                    src={'/images/allimg/rooms/Majestine/3.png'}
                                     width={3000}
                                     height={2000}
                                     alt='2.png'
@@ -148,7 +148,7 @@ const LocationOne = () => {
                                 />
                             </div>
                           
-                            <div className="name heading5 sm:mt-5 mt-3">Dubai mall</div>
+                            <div className="name heading5 sm:mt-5 mt-3">Majestine 618 </div>
                             <div className='flex  items-center  gap-6'>
                             <div className="flex items-center gap-3">
     <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
@@ -161,14 +161,15 @@ const LocationOne = () => {
   </div>
                             </Link>
                         </div>
+                       
                         <div
                             className="item hover-scale"
                             // onClick={() => handleClickContinents('Europe')}
                         >
-                             <Link href='camp/chic-studio'>
+                             <Link href='camp/reva'>
                             <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
                                 <Image
-                                    src={'/images/allimg/rooms/5.png'}
+                                    src={'/images/allimg/rooms/Reva/5.png'}
                                     width={3000}
                                     height={2000}
                                     alt='3.png'
@@ -176,7 +177,7 @@ const LocationOne = () => {
                                     className='w-full'
                                 />
                             </div>
-                            <div className="name heading5 sm:mt-5 mt-3">Chic studio</div>
+                            <div className="name heading5 sm:mt-5 mt-3">Reva 1811</div>
                             <div className='flex  items-center  gap-6'>
                             <div className="flex items-center gap-3">
     <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
@@ -189,7 +190,34 @@ const LocationOne = () => {
   </div>
                             </Link>
                         </div>
-
+ <div
+                            className="item hover-scale"
+                            // onClick={() => handleClickContinents('Europe')}
+                        >
+                             <Link href='camp/merano-2906'>
+                            <div className="bg-img w-full sm:rounded-[20px] rounded-xl overflow-hidden">
+                                <Image
+                                    src={'/images/allimg/rooms/Merano-2906/3.png'}
+                                    width={3000}
+                                    height={2000}
+                                    alt='3.png'
+                                    priority={true}
+                                    className='w-full'
+                                />
+                            </div>
+                            <div className="name heading5 sm:mt-5 mt-3"> Merano 2906</div>
+                            <div className='flex  items-center  gap-6'>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-users  text-[20px] text-[#32548e]"></span>
+    <div className="body2">2 Guests</div>
+  </div>
+                            <div className="flex items-center gap-3">
+    <span className="fi fi-rr-bed  text-[20px] text-[#32548e]"></span>
+    <div className="body2">1 Room</div>
+  </div>
+  </div>
+                            </Link>
+                        </div>
 
 
 

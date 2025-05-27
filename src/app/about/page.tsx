@@ -19,7 +19,7 @@ const About = () => {
     return (
         <>
             <HeaderOne />
-            <Breadcrumb img='/images/breadcrumb/1920x320.png' heading='About' subHeading='' />
+            <Breadcrumb img='/images/allimg/aboutBanner.png' heading='About' subHeading='' />
             <div className="video-greeting lg:pt-20 md:pt-14 pt-10">
                 <div className="container">
                     <div className="heading flex flex-col items-center justify-center">

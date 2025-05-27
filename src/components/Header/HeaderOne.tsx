@@ -241,7 +241,7 @@ const HeaderOne = () => {
                                         </li>
                                         <li>
                                             <Link href="#" className={`link text-button1 text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
-                                              Mangalore
+                                              Bangalore
                                             </Link>
                                         </li>
                                      
@@ -263,7 +263,7 @@ const HeaderOne = () => {
                             </li> */}
                             <li className='h-full relative'>
                                 <Link
-                                    href="#"
+                                    href="/pages/contact"
                                     className={`text-button1 duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/Contact' ? 'active' : ''}`}
                                 >
                                     Contact
