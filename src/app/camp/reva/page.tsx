@@ -346,9 +346,12 @@ const Reva   = () => {
 
 
 
-<div className="flex justify-end -mt-[50px] mr-[10px]">
+<div className="hidden sm:flex justify-end -mt-[50px] mr-[10px]">
   <div className="inline-block bg-white border border-gray-300 rounded-[10px] px-3 py-1">
-    <button className="flex items-center gap-2 text-[#32548e] text-[16px]"   onClick={() => setCurrentIndex(0)}>
+    <button
+      className="flex items-center gap-2 text-[#32548e] text-[16px]"
+      onClick={() => setCurrentIndex(0)}
+    >
       <span className="fi fi-rr-grip-dots text-[24px]"></span>
       Show all photos
     </button>
@@ -447,6 +450,14 @@ const Reva   = () => {
     </div>
   ))}
 </div>
+<div className="md:hidden flex justify-end -mt-[40px] mr-[10px]  ">
+  <div className="inline-block bg-white border border-g ray-300 rounded-[10px] px-3 py-1">
+    <button className="flex items-center gap-2 text-[#32548e] text-[12px]"   onClick={() => setCurrentIndex(0)}>
+      <span className="fi fi-rr-grip-dots text-[18px]"></span>
+      Show all photos
+    </button>
+  </div>
+</div>
 {/* Mobile screen */}
 
 
@@ -505,7 +516,7 @@ const Reva   = () => {
                                          }}
                                          aria-hidden="true">
                                          ·
-                                         </span>1 Bedroom<span
+                                         </span>2 Bedroom<span
                                          style={{
                                          fontSize: '14px',
                                          marginLeft: '4px',
@@ -620,18 +631,20 @@ const Reva   = () => {
                                     
 
 
-                                     <div className="body2 text-variant mt-3"  >Property Highlights:
+                                     {/* <div className="body2 text-variant mt-3"  >Property Highlights:
                                           <ul>
                                     <li className='list-disc body2 ml-5'>Location: Prime Business Bay, just minutes from Downtown Dubai, Dubai Mall, and Burj Khalifa</li>
                                     
                                 </ul>
                                     </div>
                               
-                                    <div className="body2 text-variant mt-3 border-t border-outline "  >Inside, the space features a sleek, modern design with a fully equipped kitchen, high-speed WiFi, smart TV, washing machine, and a dedicated workspace — making it ideal for both leisure and business travelers.</div>
+                                    <div className="body2 text-variant mt-3 border-t border-outline "  >Inside, the space features a sleek, modern design with a fully equipped kitchen, high-speed WiFi, smart TV, washing machine, and a dedicated workspace — making it ideal for both leisure and business travelers.</div> */}
                                     </div>
+                                    
                                   
                                 </div>
-                               
+                               <div className="heading6 text-center">Check-in: <span className='text-[#32548e] heading6'>3:00 PM </span>| Check-out:<span className='text-[#32548e] heading6'> 11:00 AM</span> </div>
+
                                 
                             </div>
                             </div>
@@ -718,29 +731,37 @@ const Reva   = () => {
                                     </div>
                                   
                                 </div>
-                                <div className="list grid grid-cols-2 gap-4 mt-4">
+                                <div className="list grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 lg:grid-cols-2">
+
+
+
+                                      {/* Pool */}
+  <div className="flex items-center gap-3">
+    <span className="fi fi-rr-swimmer text-[24px] text-[#32548e]"></span>
+    <div className="body2">Swimming pool with sun deck</div>
+  </div>
+  <div className="flex items-center gap-3">
+    <span className="fi fi-rr-time-twenty-four text-[24px] text-[#32548e]"></span>
+    <div className="body2">24/7 security and concierge services</div>
+  </div>
+
   {/* Kitchen */}
   <div className="flex items-center gap-3">
     <span className="fi fi-rr-restaurant text-[24px] text-[#32548e]"></span>
     <div className="body2">Kitchen</div>
   </div>
 
-  {/* Pool */}
-  <div className="flex items-center gap-3">
-    <span className="fi fi-rr-swimmer text-[24px] text-[#32548e]"></span>
-    <div className="body2">Pool</div>
-  </div>
 
   {/* Wifi */}
   <div className="flex items-center gap-3">
     <i className="fi fi-rr-wifi text-[24px] text-[#32548e]"></i>
-    <div className="body2">Wifi</div>
+    <div className="body2">High-speed WiFi</div>
   </div>
 
   {/* Parking */}
   <div className="flex items-center gap-3">
     <i className="fi fi-rr-parking-circle text-[24px] text-[#32548e]"></i>
-    <div className="body2">Parking</div>
+    <div className="body2">Covered parking space</div>
   </div>
 
   {/* TV */}
@@ -763,6 +784,10 @@ const Reva   = () => {
   <div className="flex items-center gap-3">
     <i className="fi fi-rr-house-laptop text-[24px] text-[#32548e]"></i>
     <div className="body2">Dedicated workspace</div>
+  </div>
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-gym text-[24px] text-[#32548e]"></i>
+    <div className="body2">Fully equipped gym with modern gear</div>
   </div>
 </div>
 

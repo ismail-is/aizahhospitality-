@@ -339,9 +339,12 @@ const MeranoTwo   = () => {
 
 
 
-<div className="flex justify-end -mt-[50px] mr-[10px]">
+<div className="hidden sm:flex justify-end -mt-[50px] mr-[10px]">
   <div className="inline-block bg-white border border-gray-300 rounded-[10px] px-3 py-1">
-    <button className="flex items-center gap-2 text-[#32548e] text-[16px]"   onClick={() => setCurrentIndex(0)}>
+    <button
+      className="flex items-center gap-2 text-[#32548e] text-[16px]"
+      onClick={() => setCurrentIndex(0)}
+    >
       <span className="fi fi-rr-grip-dots text-[24px]"></span>
       Show all photos
     </button>
@@ -440,6 +443,14 @@ const MeranoTwo   = () => {
     </div>
   ))}
 </div>
+<div className="md:hidden flex justify-end -mt-[40px] mr-[10px]  ">
+  <div className="inline-block bg-white border border-g ray-300 rounded-[10px] px-3 py-1">
+    <button className="flex items-center gap-2 text-[#32548e] text-[12px]"   onClick={() => setCurrentIndex(0)}>
+      <span className="fi fi-rr-grip-dots text-[18px]"></span>
+      Show all photos
+    </button>
+  </div>
+</div>
 {/* Mobile screen */}
 
 
@@ -488,7 +499,7 @@ const MeranoTwo   = () => {
                                 </div>
                                 <div className="flex items-center  gap-6">
                                     <div className="heading7">
-                                    <h2 style={{color:'black'}}>2 Guests 
+                                    <h2 style={{color:'black'}}>3 Guests 
                                         <span
                                          style={{
                                          fontSize: '14px',
@@ -569,59 +580,14 @@ const MeranoTwo   = () => {
 
 
                              
-                                    <div className="body2 text-variant mt-3"  >The Space:
-                                         <div className="body2 text-variant mt-3" >Step into a warm, inviting atmosphere filled with neutral colors and natural materials that create a relaxed bohemian vibe. The open-plan layout offers plenty of natural light, enhancing the spacious living areas.</div>
-                                       <div className="body2 text-variant mt-3"  >Living Room:</div>
-                                          <ul>
-                                    <li className='list-disc body2 ml-5'>Spacious and stylish with plush seating, rattan accents, and cozy rugs</li>
-                                    <li className='list-disc body2 ml-5'>Smart TV and high-speed WiFi – ideal for work or entertainment</li>
-                                    <li className='list-disc body2 ml-5'>Private balcony with comfortable seating overlooking stunning city views</li>
-                                    
-                                </ul>
-                                       <div className="body2 text-variant mt-3"  >Kitchen & Dining:</div>
-                                          <ul>
-                                    <li className='list-disc body2 ml-5'>Fully equipped modern kitchen featuring fridge, oven, microwave, stovetop, dishwasher, and more</li>
-                                    <li className='list-disc body2 ml-5'>Boho-inspired dining area for 4 guests, perfect for intimate meals</li>
-                                    
-                                </ul>
-
-
-
-                                 <div className="body2 text-variant mt-3"  >Bedrooms:</div>
-                                 <div className="body2 text-variant mt-3"  >Master Bedroom</div>
-                                          <ul>
-                                    <li className='list-disc body2 ml-5'>King-size bed with luxurious bedding</li>
-                                    <li className='list-disc body2 ml-5'>Built-in wardrobes for ample storage</li>
-                                    <li className='list-disc body2 ml-5'>En-suite bathroom with spa-like rainfall shower</li>
-                                    
-                                </ul>
-                                 <div className="body2 text-variant mt-3"  >Second Bedroom</div>
-                                          <ul>
-                                    <li className='list-disc body2 ml-5'>Queen-size bed with soft linens and calming décor</li>
-                                    <li className='list-disc body2 ml-5'>Large windows with scenic city views</li>
-                                    <li className='list-disc body2 ml-5'>Built-in wardrobes for extra storage</li>
-                                    
-                                </ul>
-                                 <div className="body2 text-variant mt-3"  >Bathrooms:</div>
-                                          <ul>
-                                    <li className='list-disc body2 ml-5'>Two elegant bathrooms with modern vanities and premium fittings</li>
-                                  
-                                    
-                                </ul>
-                                    </div>
+                                
 
 
                                     
 
 
-                                     <div className="body2 text-variant mt-3"  >Property Highlights:
-                                          <ul>
-                                    <li className='list-disc body2 ml-5'>Location: Prime Business Bay, just minutes from Downtown Dubai, Dubai Mall, and Burj Khalifa</li>
                                     
-                                </ul>
-                                    </div>
                               
-                                    <div className="body2 text-variant mt-3 border-t border-outline "  >Inside, the space features a sleek, modern design with a fully equipped kitchen, high-speed WiFi, smart TV, washing machine, and a dedicated workspace — making it ideal for both leisure and business travelers.</div>
                                     </div>
                                   
                                 </div>
@@ -712,17 +678,17 @@ const MeranoTwo   = () => {
                                     </div>
                                   
                                 </div>
-                                <div className="list grid grid-cols-2 gap-4 mt-4">
+                                <div className="list grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 lg:grid-cols-2">
   {/* Kitchen */}
   <div className="flex items-center gap-3">
     <span className="fi fi-rr-restaurant text-[24px] text-[#32548e]"></span>
-    <div className="body2">Kitchen</div>
+    <div className="body2">Fully Equipped Kitchen</div>
   </div>
 
   {/* Pool */}
   <div className="flex items-center gap-3">
     <span className="fi fi-rr-swimmer text-[24px] text-[#32548e]"></span>
-    <div className="body2">Pool</div>
+    <div className="body2">Pool Access</div>
   </div>
 
   {/* Wifi */}
@@ -741,6 +707,10 @@ const MeranoTwo   = () => {
   <div className="flex items-center gap-3">
     <i className="fi fi-rr-computer text-[24px] text-[#32548e]"></i>
     <div className="body2">TV</div>
+  </div>
+  <div className="flex items-center gap-3">
+    <i className="fi fi-rr-sensor-smoke text-[24px] text-[#32548e]"></i>
+    <div className="body2">Smoke Alarm</div>
   </div>
 
   {/* AC */}

@@ -99,7 +99,7 @@ const Contact = () => {
                 <div className="container">
                     <div className="map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11895.370988980812!2d-87.938181987167!3d41.810147885967005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e4eb1d9c53135%3A0x1e7c2347e59cb561!2sIBJI%20OrthoAccess%20Immediate%20Care%20-%20Hinsdale!5e0!3m2!1svi!2s!4v1705375385853!5m2!1svi!2s"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.685370422137!2d55.1365318!3d25.1125097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ddbf8e6f805495%3A0x24b7a6fe3e11b714!2sAiza%20Hospitality!5e0!3m2!1sen!2sin!4v1748336745016!5m2!1sen!2sin"
                             loading="lazy"
                             className='w-full lg:h-[600px] md:h-[500px] sm:h-[400px] h-[360px] rounded-[20px]'
                         >

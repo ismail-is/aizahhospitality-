@@ -339,9 +339,12 @@ const Merano  = () => {
 
 
 
-<div className="flex justify-end -mt-[50px] mr-[10px]">
+<div className="hidden sm:flex justify-end -mt-[50px] mr-[10px]">
   <div className="inline-block bg-white border border-gray-300 rounded-[10px] px-3 py-1">
-    <button className="flex items-center gap-2 text-[#32548e] text-[16px]"   onClick={() => setCurrentIndex(0)}>
+    <button
+      className="flex items-center gap-2 text-[#32548e] text-[16px]"
+      onClick={() => setCurrentIndex(0)}
+    >
       <span className="fi fi-rr-grip-dots text-[24px]"></span>
       Show all photos
     </button>
@@ -438,6 +441,14 @@ const Merano  = () => {
       />
     </div>
   ))}
+</div>
+<div className="md:hidden flex justify-end -mt-[40px] mr-[10px]  ">
+  <div className="inline-block bg-white border border-g ray-300 rounded-[10px] px-3 py-1">
+    <button className="flex items-center gap-2 text-[#32548e] text-[12px]"   onClick={() => setCurrentIndex(0)}>
+      <span className="fi fi-rr-grip-dots text-[18px]"></span>
+      Show all photos
+    </button>
+  </div>
 </div>
 {/* Mobile screen */}
 
@@ -633,30 +644,33 @@ const Merano  = () => {
 
 
                                 
-
+<div className="heading6 text-center">Check-in: <span className='text-[#32548e] heading6'>3:00 PM </span>| Check-out:<span className='text-[#32548e] heading6'> 11:00 AM</span> </div>
 
 <div className="content-detail  border-t border-outline pt-4 pb-4">
                     <div className="container">
+                        
                         <div className="flex max-lg:flex-col-reverse gap-y-10 justify-between">
                             <div className="content xl:w-3/3 lg:w-[100%] lg:pr-[15px] w-full">
 
                                 <div className="flex items-center  gap-6">
+                                    
                                     <div className="heading5">
+                                        
                                     <div className="heading6">Amenities and features</div>
                                     </div>
                                   
                                 </div>
-                                <div className="list grid grid-cols-2 gap-4 mt-4">
+                                <div className="list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-4 mt-4">
   {/* Kitchen */}
   <div className="flex items-center gap-3">
     <span className="fi fi-rr-restaurant text-[24px] text-[#32548e]"></span>
-    <div className="body2">Kitchen</div>
+    <div className="body2">Fully equipped kitchen & kitchenette</div>
   </div>
 
   {/* Pool */}
   <div className="flex items-center gap-3">
     <span className="fi fi-rr-swimmer text-[24px] text-[#32548e]"></span>
-    <div className="body2">Pool</div>
+    <div className="body2">Swimming pool & beach access</div>
   </div>
 
   {/* Wifi */}
@@ -668,7 +682,7 @@ const Merano  = () => {
   {/* Parking */}
   <div className="flex items-center gap-3">
     <i className="fi fi-rr-parking-circle text-[24px] text-[#32548e]"></i>
-    <div className="body2">Parking</div>
+    <div className="body2">Free parking on premises</div>
   </div>
 
   {/* TV */}
@@ -691,6 +705,15 @@ const Merano  = () => {
   <div className="flex items-center gap-3">
     <i className="fi fi-rr-house-laptop text-[24px] text-[#32548e]"></i>
     <div className="body2">Dedicated workspace</div>
+  </div>
+  <div className="flex items-center gap-3">
+      <i className="fi fi-rr-chart-area text-[24px] text-[#32548e]"></i>
+    <div className="body2">Outdoor playing areas</div>
+  </div>
+  <div className="flex items-center gap-3">
+      <i className="fi fi-rr-database text-[24px] text-[#32548e]"></i>
+    <div className="body2">Iron & clothes storage
+</div>
   </div>
 </div>
 
