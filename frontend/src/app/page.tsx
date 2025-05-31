@@ -18,6 +18,7 @@ import HeaderTwo from '@/components/Header/HeaderTwo'
 const Home = () => {
   return (
     <>
+  
       <div className="page-one overflow-x-hidden">
         <HeaderTwo />
         <SliderOne />
